@@ -1,0 +1,60 @@
+import { NextResponse } from "next/server";
+import { getPrisma } from "@/lib/prisma";
+
+export const runtime = 'nodejs';
+
+// Marketing exec registers a new partner
+export async function POST(req: Request) {
+    try {
+        const body = await req.json();
+        const { hotelName, contactName, mobile, email, commissionSlab } = body;
+
+        if (!hotelName || !contactName || !mobile) {
+            return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+        }
+
+        const prisma = getPrisma();
+
+        // Generate a unique partner code from hotel name
+        const slug = hotelName
+            .toUpperCase()
+            .replace(/[^A-Z0-9\s]/g, "")
+            .split(" ")
+            .map((w: string) => w.slice(0, 3))
+            .join("")
+            .slice(0, 8);
+        const partnerCode = `${slug}${Date.now().toString().slice(-4)}`;
+
+        // Check for duplicate mobile
+        const existing = await prisma.partner.findUnique({ where: { mobile } });
+        if (existing) {
+            return NextResponse.json({ error: "A partner with this mobile already exists." }, { status: 409 });
+        }
+
+        const newPartner = await prisma.partner.create({
+            data: {
+                id: `p_${Date.now()}`,
+                name: hotelName,
+                contactName,
+                mobile,
+                email: email || null,
+                partnerCode,
+                commissionSlab: parseFloat(commissionSlab) || 7.5,
+                guestDiscountSlab: parseFloat(commissionSlab) || 7.5, // Default to matching commission
+                status: "PENDING",
+                walletBalance: 500, // ₹500 joining bonus
+                createdAt: new Date().toISOString(),
+            }
+        });
+
+        return NextResponse.json({
+            success: true,
+            partnerCode: newPartner.partnerCode,
+            passUrl: `${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:5000"}/p/${newPartner.partnerCode}`
+        });
+
+    } catch (err) {
+        console.error("Partner register error:", err);
+        return NextResponse.json({ error: "Failed to register partner." }, { status: 500 });
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Divyam Partner Hub",
+    "short_name": "Divyam",
+    "description": "Hospitality Network Partner Program for commissions and referrals.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFAF5",
+    "theme_color": "#FF7A1A",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        }
+    ]
+}
