@@ -11,8 +11,9 @@ import { cn } from "@/lib/utils";
 export default function EarningsCalculator() {
     const [guests, setGuests] = React.useState(20);
     const [avgBill, setAvgBill] = React.useState(1200);
+    const [commission, setCommission] = React.useState(7.5);
 
-    const monthlyComm = (guests * avgBill * 0.075);
+    const monthlyComm = (guests * avgBill * (commission / 100));
     const annualComm = monthlyComm * 12;
 
     return (
@@ -60,6 +61,22 @@ export default function EarningsCalculator() {
                             className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-divyam-orange"
                         />
                     </div>
+
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center">
+                            <label className="text-xs font-black text-gray-400 uppercase tracking-widest">Commission Rate</label>
+                            <span className="text-xl font-black text-gray-900">{commission}%</span>
+                        </div>
+                        <input
+                            type="range"
+                            min="1"
+                            max="20"
+                            step="0.5"
+                            value={commission}
+                            onChange={(e) => setCommission(parseFloat(e.target.value))}
+                            className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-divyam-orange"
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -72,15 +89,15 @@ export default function EarningsCalculator() {
                             key={monthlyComm}
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
-                            className="text-5xl font-black text-white tracking-tighter shadow-sm"
+                            className="text-4xl lg:text-5xl font-black text-white tracking-tighter shadow-sm"
                         >
-                            ₹{monthlyComm.toLocaleString()}
+                            ₹{monthlyComm.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                         </motion.p>
                     </div>
 
                     <div className="pt-8 border-t border-white/20">
                         <p className="text-orange-100 text-[10px] font-black uppercase tracking-[0.2em] mb-2">Annual Potential</p>
-                        <p className="text-2xl font-black text-yellow-200 tracking-tight">₹{annualComm.toLocaleString()}</p>
+                        <p className="text-2xl font-black text-yellow-200 tracking-tight">₹{annualComm.toLocaleString(undefined, { maximumFractionDigits: 0 })}</p>
                     </div>
 
                     <div className="pt-6">
@@ -92,7 +109,7 @@ export default function EarningsCalculator() {
                             </Button>
                         </Link>
                         <p className="text-[10px] text-orange-200 mt-5 text-center font-medium italic">
-                            *Based on standard 7.5% commission slab.
+                            *Based on selected {commission}% commission slab.
                         </p>
                     </div>
                 </div>
