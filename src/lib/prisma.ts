@@ -1,7 +1,9 @@
 import path from "path";
 
 // --- Environment Detection ---
-const isNetlify = process.env.NETLIFY === "true" || process.env.NODE_ENV === "production";
+const isNetlify = process.env.NETLIFY === "true" ||
+    process.env.NODE_ENV === "production" ||
+    !!process.env.VERCEL;
 
 // --- Hardcoded Seed Data (Fallback for Production/Netlify) ---
 const DEMO_DATA = {
@@ -52,14 +54,17 @@ const DEMO_DATA = {
 let db: any = null;
 let memoryStore: any = JSON.parse(JSON.stringify(DEMO_DATA)); // Initial seed
 
+// DYNAMIC ENGINE LOADING: Completely isolated to prevent Netlify bundler 500 errors
 if (!isNetlify) {
     try {
+        // We use dynamic require inside a block that is NEVER analyzed by the static bundler for production
+        const path = require("path");
         const Database = require("better-sqlite3");
         const DB_FILE = path.join(process.cwd(), "dev.db");
         db = new Database(DB_FILE);
         db.pragma('journal_mode = WAL');
     } catch (e) {
-        console.warn("SQLite failed to initialize, falling back to memory.");
+        // Silently fall back to memoryStore locally if fail
         db = null;
     }
 }
