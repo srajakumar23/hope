@@ -31,6 +31,8 @@ export default function AdminLoginPage() {
             const data = await res.json();
 
             if (data.success) {
+                // Sync JWT session with localStorage guard used by the admin layout
+                localStorage.setItem("divyam_admin_session", JSON.stringify({ role: "ADMIN", ts: Date.now() }));
                 toast.success("Admin Authorization Granted");
                 router.push(data.redirectUrl || "/admin/dashboard");
             } else {
