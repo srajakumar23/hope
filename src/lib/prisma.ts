@@ -1,12 +1,56 @@
 import path from "path";
-import fs from "fs";
 
 // --- Environment Detection ---
 const isNetlify = process.env.NETLIFY === "true" || process.env.NODE_ENV === "production";
 
+// --- Hardcoded Seed Data (Fallback for Production/Netlify) ---
+const DEMO_DATA = {
+    "partners": [
+        {
+            "id": "demo-id",
+            "partnerCode": "demo",
+            "name": "Grand Hotel & Suites (Demo)",
+            "email": "demo@partner.hub",
+            "mobile": "0000000000",
+            "commissionSlab": 7.5
+        },
+        {
+            "id": "p_1772277716048",
+            "name": "Hotel New",
+            "contactName": "Test",
+            "mobile": "9442266704",
+            "email": null,
+            "partnerCode": "HOTNEW6047",
+            "commissionSlab": 7.5,
+            "status": "ACTIVE",
+            "walletBalance": 500,
+            "joinedAt": "2026-02-28T11:21:56.048Z"
+        }
+    ],
+    "guests": [
+        {
+            "id": "g_1772272097440",
+            "name": "Simulated User",
+            "mobileNumber": "9123456789",
+            "partnerId": "demo-id",
+            "createdAt": "2026-02-28T09:48:17.440Z"
+        },
+        {
+            "id": "g_1772272291059",
+            "name": "Fresh User",
+            "mobileNumber": "9988776655",
+            "partnerId": "demo-id",
+            "createdAt": "2026-02-28T09:51:31.059Z"
+        }
+    ],
+    "scanLogs": [],
+    "dynamicQRs": [],
+    "payouts": []
+};
+
 // --- Database Engine Initialization ---
 let db: any = null;
-let memoryStore: any = null;
+let memoryStore: any = JSON.parse(JSON.stringify(DEMO_DATA)); // Initial seed
 
 if (!isNetlify) {
     try {
@@ -15,21 +59,9 @@ if (!isNetlify) {
         db = new Database(DB_FILE);
         db.pragma('journal_mode = WAL');
     } catch (e) {
-        console.warn("SQLite failed to initialize, falling back to memory.", e);
+        console.warn("SQLite failed to initialize, falling back to memory.");
         db = null;
     }
-}
-
-// Ensure memory store is always available as fallback or primary for production
-try {
-    const MOCK_FILE = path.join(process.cwd(), "prisma/mock-db.json");
-    if (fs.existsSync(MOCK_FILE)) {
-        memoryStore = JSON.parse(fs.readFileSync(MOCK_FILE, "utf-8"));
-    } else {
-        memoryStore = { partners: [], guests: [], scanLogs: [], dynamicQRs: [], payouts: [] };
-    }
-} catch (e) {
-    memoryStore = { partners: [], guests: [], scanLogs: [], dynamicQRs: [], payouts: [] };
 }
 
 // --- Universal Prisma Mock Implementation ---
@@ -138,7 +170,7 @@ export const prisma: any = {
             return guests.map(g => {
                 const res = { ...g };
                 if (include?.partner) res.partner = memoryStore.partners.find((p: any) => p.id === g.partnerId);
-                if (include?.dynamicQr) res.dynamicQr = memoryStore.dynamicQRs.find((q: any) => q.guestId === g.id);
+                if (include?.dynamicQr) res.dynamicQr = (memoryStore.dynamicQRs || []).find((q: any) => q.guestId === g.id);
                 return res;
             });
         },
@@ -165,7 +197,7 @@ export const prisma: any = {
             if (!guest) return null;
             const res = { ...guest };
             if (include?.partner) res.partner = memoryStore.partners.find((p: any) => p.id === guest.partnerId);
-            if (include?.dynamicQr) res.dynamicQr = memoryStore.dynamicQRs.find((q: any) => q.guestId === guest.id);
+            if (include?.dynamicQr) res.dynamicQr = (memoryStore.dynamicQRs || []).find((q: any) => q.guestId === guest.id);
             return res;
         },
         count: async ({ where }: any) => {
@@ -214,7 +246,7 @@ export const prisma: any = {
                 });
             }
 
-            let logs = [...memoryStore.scanLogs];
+            let logs = [...(memoryStore.scanLogs || [])];
             if (where?.status) {
                 const statusList = (typeof where.status === 'object' && where.status.in) ? where.status.in : [where.status];
                 logs = logs.filter(l => statusList.includes(l.status));
@@ -242,7 +274,7 @@ export const prisma: any = {
                 return row ? { ...row, createdAt: new Date(row.createdAt) } : null;
             }
 
-            let logs = memoryStore.scanLogs.filter((l: any) => l.guestId === where.guestId);
+            let logs = (memoryStore.scanLogs || []).filter((l: any) => l.guestId === where.guestId);
             if (where?.createdAt?.gte) {
                 const gte = new Date(where.createdAt.gte).getTime();
                 logs = logs.filter((l: any) => new Date(l.createdAt).getTime() >= gte);
@@ -261,6 +293,7 @@ export const prisma: any = {
                 stmt.run(id, data.guestId, data.adminId, data.billAmount, data.discountAmount, data.guestDiscountAmount || 0, data.partnerCommissionAmount || 0, data.status || "SETTLED", now.getTime());
             }
             const newLog = { id, ...data, createdAt: now };
+            if (!memoryStore.scanLogs) memoryStore.scanLogs = [];
             memoryStore.scanLogs.push(newLog);
             return newLog;
         },
@@ -281,7 +314,7 @@ export const prisma: any = {
             }
 
             let count = 0;
-            memoryStore.scanLogs.forEach((l: any) => {
+            (memoryStore.scanLogs || []).forEach((l: any) => {
                 let match = true;
                 if (where.id?.in && !where.id.in.includes(l.id)) match = false;
                 if (where.status && l.status !== where.status) match = false;
@@ -300,7 +333,7 @@ export const prisma: any = {
                 if (!row) return null;
                 return { ...row, expiresAt: new Date(row.expiresAt) };
             }
-            const qr = memoryStore.dynamicQRs.find((q: any) => q.id === where.id || q.guestId === where.guestId);
+            const qr = (memoryStore.dynamicQRs || []).find((q: any) => q.id === where.id || q.guestId === where.guestId);
             return qr ? { ...qr, expiresAt: new Date(qr.expiresAt) } : null;
         },
         upsert: async ({ where, create, update }: any) => {
@@ -319,6 +352,7 @@ export const prisma: any = {
                 }
             }
 
+            if (!memoryStore.dynamicQRs) memoryStore.dynamicQRs = [];
             const idx = memoryStore.dynamicQRs.findIndex((q: any) => q.guestId === where.guestId);
             if (idx !== -1) {
                 memoryStore.dynamicQRs[idx] = { ...memoryStore.dynamicQRs[idx], ...update };
@@ -340,6 +374,7 @@ export const prisma: any = {
                 stmt.run(id, data.partnerId, data.amount, data.status || "COMPLETED", data.method || "BANK_TRANSFER", data.logsCount || 0, now.getTime());
             }
             const newPayout = { id, ...data, createdAt: now };
+            if (!memoryStore.payouts) memoryStore.payouts = [];
             memoryStore.payouts.push(newPayout);
             return newPayout;
         },
@@ -354,7 +389,7 @@ export const prisma: any = {
                 const rows: any[] = db.prepare(query).all(...params);
                 return rows.map(r => ({ ...r, createdAt: new Date(r.createdAt) }));
             }
-            let payouts = [...memoryStore.payouts];
+            let payouts = [...(memoryStore.payouts || [])];
             if (where?.partnerId) payouts = payouts.filter(p => p.partnerId === where.partnerId);
             return payouts.map(p => ({ ...p, createdAt: new Date(p.createdAt) }));
         }
