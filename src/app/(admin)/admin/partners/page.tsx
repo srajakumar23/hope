@@ -56,7 +56,7 @@ export default function AdminPartnersPage() {
 
     // Form state for new partner
     const [newPartner, setNewPartner] = useState({
-        hotelName: "",
+        partnerName: "",
         contactName: "",
         mobile: "",
         email: "",
@@ -122,7 +122,7 @@ export default function AdminPartnersPage() {
                 toast.success("Partner Onboarded Successfully!");
                 setShowAddPartner(false);
                 setNewPartner({
-                    hotelName: "",
+                    partnerName: "",
                     contactName: "",
                     mobile: "",
                     email: "",
@@ -156,7 +156,7 @@ export default function AdminPartnersPage() {
         const link = document.createElement("a");
         const url = URL.createObjectURL(blob);
         link.setAttribute("href", url);
-        link.setAttribute("download", `divyam_partners_${new Date().toISOString().split('T')[0]}.csv`);
+        link.setAttribute("download", `hopecafe_partners_${new Date().toISOString().split('T')[0]}.csv`);
         link.style.visibility = 'hidden';
         document.body.appendChild(link);
         link.click();
@@ -346,7 +346,7 @@ export default function AdminPartnersPage() {
                         <div className="p-10 border-b border-gray-50 flex justify-between items-center">
                             <div>
                                 <h3 className="text-3xl font-black text-gray-900 uppercase tracking-tight">Onboard Partner</h3>
-                                <p className="text-xs text-gray-500 font-bold mt-1 uppercase tracking-widest leading-none">Adding to Divyam Network</p>
+                                <p className="text-xs text-gray-500 font-bold mt-1 uppercase tracking-widest leading-none">Adding to HOPE Cafe Network</p>
                             </div>
                             <Button variant="ghost" size="icon" onClick={() => setShowAddPartner(false)} className="rounded-2xl">
                                 <Plus className="w-6 h-6 text-gray-300 rotate-45" />
@@ -358,10 +358,10 @@ export default function AdminPartnersPage() {
                                 <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Business Name</label>
                                 <Input
                                     required
-                                    placeholder="e.g. Sea Side Hotel & Resorts"
+                                    placeholder="e.g. Grand Hope Resort"
                                     className="h-14 rounded-2xl border-gray-100 focus:border-hope-purple"
-                                    value={newPartner.hotelName}
-                                    onChange={(e) => setNewPartner({ ...newPartner, hotelName: e.target.value })}
+                                    value={newPartner.partnerName}
+                                    onChange={(e) => setNewPartner({ ...newPartner, partnerName: e.target.value })}
                                 />
                             </div>
                             <div className="space-y-4">

@@ -112,7 +112,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
 
             {/* Main Content Area */}
             <main className={cn("flex-1 transition-all", !isAuthPage && "lg:ml-72")}>
-                <div className={cn("min-h-screen", isAuthPage ? "flex items-center justify-center bg-gray-50" : "p-8 lg:p-12")}>
+                <div className={cn("min-h-screen", isAuthPage ? "flex items-center justify-center bg-surface-light" : "p-8 lg:p-12")}>
                     {children}
                 </div>
             </main>

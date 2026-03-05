@@ -77,11 +77,11 @@ export default function MarketingDashboardPage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div>
                     <h1 className="text-3xl font-black text-gray-900 tracking-tight">Executive Dashboard</h1>
-                    <p className="text-gray-500 font-medium mt-2">Track your hotel onboardings and generated revenue.</p>
+                    <p className="text-gray-500 font-medium mt-2">Track your partner onboardings and generated revenue.</p>
                 </div>
                 <Link href="/marketing/onboard">
                     <Button className="h-12 bg-hope-purple hover:bg-purple-700 shadow-lg shadow-hope-purple/20 px-6">
-                        + Onboard New Hotel
+                        + Onboard New Partner
                     </Button>
                 </Link>
             </div>
@@ -96,7 +96,7 @@ export default function MarketingDashboardPage() {
                                 <Building2 className="w-7 h-7 text-hope-purple" />
                             </div>
                             <div className="mt-auto">
-                                <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Total Hotels Onboarded</p>
+                                <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Total Partners Onboarded</p>
                                 <div className="flex items-end gap-3">
                                     <h3 className="text-4xl font-extrabold text-gray-900 tracking-tight">{metrics.totalPartners}</h3>
                                     <div className="flex items-center text-green-500 text-[10px] font-black uppercase tracking-wider mb-2 bg-green-50 px-2 py-0.5 rounded-full">
@@ -124,18 +124,18 @@ export default function MarketingDashboardPage() {
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="md:col-span-2 h-full">
-                    <Card className="border-none shadow-xl shadow-gray-200/40 rounded-[2rem] bg-gray-900 text-white overflow-hidden relative h-full group hover:shadow-gray-900/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-hope-purple/20 rounded-full blur-3xl -z-0 transition-opacity duration-500 group-hover:opacity-100 opacity-60" />
+                    <Card className="border-none shadow-xl shadow-hope-purple/10 rounded-[2rem] bg-white overflow-hidden relative h-full group hover:shadow-hope-purple/20 hover:-translate-y-1.5 transition-all duration-500">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-hope-purple/5 rounded-full blur-3xl -z-0 transition-opacity duration-500 group-hover:opacity-100 opacity-60" />
                         <CardContent className="p-10 relative z-10 h-full flex flex-col justify-between">
                             <div className="flex justify-between items-start">
-                                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center border border-white/5 backdrop-blur-md transition-transform duration-500 group-hover:scale-110">
+                                <div className="w-14 h-14 bg-hope-purple/10 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
                                     <IndianRupee className="w-7 h-7 text-hope-purple" />
                                 </div>
-                                <span className="px-4 py-1.5 bg-white/10 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/5">Your Earnings</span>
+                                <span className="px-4 py-1.5 bg-hope-purple/10 text-hope-purple rounded-full text-[10px] font-black uppercase tracking-widest border border-hope-purple/10">Your Earnings</span>
                             </div>
                             <div className="mt-12">
                                 <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Total Commission Earned</p>
-                                <h3 className="text-6xl font-black text-white tracking-tighter">₹{(metrics.marketingCommission).toLocaleString()}</h3>
+                                <h3 className="text-6xl font-black text-gray-900 tracking-tighter">₹{(metrics.marketingCommission).toLocaleString()}</h3>
                             </div>
                         </CardContent>
                     </Card>
@@ -147,7 +147,7 @@ export default function MarketingDashboardPage() {
                 <div className="flex items-center justify-between mb-8">
                     <div>
                         <h2 className="text-xl font-bold text-gray-900">Your Managed Partners</h2>
-                        <p className="text-sm text-gray-500 mt-1">Hotels and agencies you have successfully onboarded.</p>
+                        <p className="text-sm text-gray-500 mt-1">Partners and agencies you have successfully onboarded.</p>
                     </div>
                 </div>
 

@@ -15,7 +15,7 @@ export default function AddPartnerPage() {
 
     // Form State
     const [formData, setFormData] = useState({
-        hotelName: "",
+        partnerName: "",
         contactName: "",
         mobile: "",
         email: "",
@@ -29,7 +29,7 @@ export default function AddPartnerPage() {
     };
 
     const nextStep = () => {
-        if (step === 1 && (!formData.hotelName || !formData.contactName || formData.mobile.length !== 10)) return;
+        if (step === 1 && (!formData.partnerName || !formData.contactName || formData.mobile.length !== 10)) return;
         if (step === 2 && (!formData.bankAccount || !formData.ifsc)) return;
         setStep(step + 1);
     };
@@ -70,12 +70,12 @@ export default function AddPartnerPage() {
                 </motion.div>
                 <h2 className="text-3xl font-black text-gray-900 mb-2">Partner Instantly Active!</h2>
                 <p className="text-gray-500 max-w-sm mb-8">
-                    <span className="font-bold text-gray-900">{formData.hotelName}</span> is now live on the network at the {formData.commissionSlab}% slab.
+                    <span className="font-bold text-gray-900">{formData.partnerName}</span> is now live on the network at the {formData.commissionSlab}% slab.
                 </p>
 
                 <div className="bg-hope-purple/5 border border-hope-purple/20 p-6 rounded-2xl w-full max-w-md mb-8">
                     <h3 className="text-sm font-bold text-hope-purple uppercase tracking-widest mb-4">Print QR Standee</h3>
-                    <p className="text-xs text-gray-600 mb-5">Scan or hand this QR to the receptionist — guests scan it at the hotel to get their Live Pass.</p>
+                    <p className="text-xs text-gray-600 mb-5">Scan or hand this QR to the receptionist — guests scan it at the property to get their Live Pass.</p>
 
                     {/* QR Code */}
                     <div className="bg-white p-5 rounded-xl border border-purple-100 flex justify-center mb-4 shadow-sm">
@@ -109,7 +109,7 @@ export default function AddPartnerPage() {
                     <span className="text-xs font-bold text-hope-purple uppercase tracking-widest">Marketing Portal</span>
                 </div>
                 <h1 className="text-3xl font-black text-gray-900 tracking-tight">Onboard New Partner</h1>
-                <p className="text-gray-500 font-medium mt-2">Instantly activate a hotel or tour guide and issue their QR Standee link.</p>
+                <p className="text-gray-500 font-medium mt-2">Instantly activate a business or agency and issue their QR Standee link.</p>
             </div>
 
             {/* Progress Track */}
@@ -140,14 +140,14 @@ export default function AddPartnerPage() {
 
                             <div className="space-y-4">
                                 <div>
-                                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2 ml-1">Business Name (Hotel / Tour Agency)</label>
+                                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2 ml-1">Business Name (Partner / Agency)</label>
                                     <input
                                         type="text"
-                                        name="hotelName"
-                                        value={formData.hotelName}
+                                        name="partnerName"
+                                        value={formData.partnerName}
                                         onChange={handleChange}
                                         className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-hope-purple"
-                                        placeholder="e.g. Grand Hotel & Suites"
+                                        placeholder="e.g. Grand Hope Cafe & Suites"
                                         required
                                     />
                                 </div>
@@ -188,7 +188,7 @@ export default function AddPartnerPage() {
                             </div>
 
                             <div className="pt-6 flex justify-end">
-                                <Button onClick={nextStep} className="h-12 px-8 bg-hope-purple hover:bg-purple-700 text-white" disabled={!formData.hotelName || !formData.contactName || formData.mobile.length !== 10}>
+                                <Button onClick={nextStep} className="h-12 px-8 bg-hope-purple hover:bg-purple-700 text-white" disabled={!formData.partnerName || !formData.contactName || formData.mobile.length !== 10}>
                                     Next Step <ChevronRight className="w-4 h-4 ml-1" />
                                 </Button>
                             </div>
@@ -286,7 +286,7 @@ export default function AddPartnerPage() {
                             <div className="bg-gray-900 rounded-xl p-6 text-white shadow-xl">
                                 <h4 className="font-bold mb-4 border-b border-gray-800 pb-2">Activation Summary</h4>
                                 <div className="space-y-2 text-sm font-medium">
-                                    <div className="flex justify-between"><span className="text-gray-400">Partner:</span> <span>{formData.hotelName}</span></div>
+                                    <div className="flex justify-between"><span className="text-gray-400">Partner:</span> <span>{formData.partnerName}</span></div>
                                     <div className="flex justify-between"><span className="text-gray-400">Contact:</span> <span>+91 {formData.mobile}</span></div>
                                     <div className="flex justify-between"><span className="text-gray-400">Commission Rate:</span> <span className="text-hope-purple font-bold">{formData.commissionSlab}%</span></div>
                                 </div>
