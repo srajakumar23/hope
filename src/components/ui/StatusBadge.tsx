@@ -14,7 +14,7 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
     if (s === "ACTIVE") {
         variant = "bg-green-50 text-green-600 border-green-100";
     } else if (s === "PENDING" || s === "PENDING APP") {
-        variant = "bg-orange-50 text-orange-600 border-orange-100";
+        variant = "bg-purple-50 text-purple-700 border-purple-100";
     } else if (s === "REJECTED") {
         variant = "bg-red-50 text-red-600 border-red-100";
     } else if (s === "SETTLED") {

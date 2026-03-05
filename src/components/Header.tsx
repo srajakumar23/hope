@@ -31,25 +31,25 @@ export default function Header() {
             )}
         >
             {/* Top decorative gradient edge */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-divyam-orange via-orange-400 to-divyam-orange" />
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-hope-purple via-hope-purple to-hope-purple" />
 
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
                 <div className="flex justify-between items-center relative">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group relative z-10 transition-transform hover:scale-[1.02]">
-                        <div className="absolute inset-0 bg-divyam-orange/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-hope-purple/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <motion.div
-                            whileHover={{ rotate: 180 }}
+                            whileHover={{ scale: 1.1 }}
                             transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
-                            className="w-10 h-10 bg-gradient-to-tr from-divyam-orange to-orange-400 rounded-xl flex items-center justify-center shadow-lg shadow-divyam-orange/30 relative z-10"
+                            className="w-12 h-12 relative z-10"
                             role="img"
-                            aria-label="Divyam Hospitality Logo"
+                            aria-label="HOPE Cafe Logo"
                         >
-                            <span className="text-white text-2xl font-bold">✧</span>
+                            <img src="/logo.png" alt="HOPE Cafe" className="w-full h-full object-contain" />
                         </motion.div>
                         <div className="flex flex-col relative z-10">
-                            <span className="font-black text-xl leading-none text-gray-900 tracking-tight">Divyam</span>
-                            <span className="text-[10px] text-divyam-orange uppercase tracking-[0.2em] font-black">Hospitality</span>
+                            <span className="font-black text-xl leading-none text-gray-900 tracking-tight">HOPE Cafe</span>
+                            <span className="text-[10px] text-hope-purple uppercase tracking-[0.2em] font-black">Hospitality</span>
                         </div>
                     </Link>
 
@@ -58,7 +58,7 @@ export default function Header() {
                         <nav className="flex items-center gap-2 sm:gap-4 relative z-10">
                             <Link
                                 href="/login"
-                                className="hidden md:flex text-sm font-bold text-gray-600 hover:text-divyam-orange transition-all items-center gap-2 px-4 py-2 rounded-full hover:bg-divyam-orange/5 border border-transparent hover:border-divyam-orange/10"
+                                className="hidden md:flex text-sm font-bold text-gray-600 hover:text-hope-purple transition-all items-center gap-2 px-4 py-2 rounded-full hover:bg-hope-purple/5 border border-transparent hover:border-hope-purple/10"
                             >
                                 <LogIn className="w-4 h-4" />
                                 <span>Partner Login</span>
@@ -75,7 +75,7 @@ export default function Header() {
                             </Link>
 
                             <Link href="/scan" className="ml-2">
-                                <Button size="sm" className="flex gap-2 rounded-full shadow-md shadow-divyam-orange/20 hover:shadow-lg hover:shadow-divyam-orange/40 transition-all hover:-translate-y-0.5 bg-gradient-to-r from-divyam-orange to-orange-500 hover:from-orange-500 hover:to-divyam-orange border-none h-10 px-5 ring-2 ring-transparent hover:ring-divyam-orange/20" aria-label="Find your guest pass">
+                                <Button size="sm" className="flex gap-2 rounded-full shadow-md shadow-hope-purple/20 hover:shadow-lg hover:shadow-hope-purple/40 transition-all hover:-translate-y-0.5 bg-gradient-to-r from-hope-purple to-hope-pink hover:from-hope-pink hover:to-hope-purple border-none h-10 px-5 ring-2 ring-transparent hover:ring-hope-purple/20" aria-label="Find your guest pass">
                                     <QrCode className="w-4 h-4" />
                                     <span className="font-bold">Guest Pass</span>
                                 </Button>

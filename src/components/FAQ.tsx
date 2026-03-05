@@ -12,7 +12,7 @@ const faqs = [
     },
     {
         question: "Is there a limit to how much I can earn?",
-        answer: "No. There is absolutely no cap on your earnings. The more guests you refer to Divyam Café, the more you earn. Some of our top partners earn over ₹50,000 monthly."
+        answer: "No. There is absolutely no cap on your earnings. The more guests you refer to HOPE Cafe, the more you earn. Some of our top partners earn over ₹50,000 monthly."
     },
     {
         question: "How long does verification take?",
@@ -36,7 +36,7 @@ export default function FAQ() {
                         key={idx}
                         className={cn(
                             "rounded-3xl border-2 transition-all duration-300",
-                            isOpen ? "border-divyam-orange bg-white shadow-xl shadow-divyam-orange/5" : "border-gray-50 bg-gray-50/50"
+                            isOpen ? "border-hope-purple bg-white shadow-xl shadow-hope-purple/5" : "border-gray-50 bg-gray-50/50"
                         )}
                     >
                         <button
@@ -51,7 +51,7 @@ export default function FAQ() {
                             </span>
                             <div className={cn(
                                 "w-10 h-10 rounded-xl flex items-center justify-center transition-all",
-                                isOpen ? "bg-divyam-orange text-white rotate-180" : "bg-white text-gray-400"
+                                isOpen ? "bg-hope-purple text-white rotate-180" : "bg-white text-gray-400"
                             )}>
                                 <ChevronDown className="w-5 h-5" />
                             </div>

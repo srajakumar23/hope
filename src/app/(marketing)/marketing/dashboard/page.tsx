@@ -80,7 +80,7 @@ export default function MarketingDashboardPage() {
                     <p className="text-gray-500 font-medium mt-2">Track your hotel onboardings and generated revenue.</p>
                 </div>
                 <Link href="/marketing/onboard">
-                    <Button className="h-12 bg-divyam-orange hover:bg-orange-600 shadow-lg shadow-divyam-orange/20 px-6">
+                    <Button className="h-12 bg-hope-purple hover:bg-purple-700 shadow-lg shadow-hope-purple/20 px-6">
                         + Onboard New Hotel
                     </Button>
                 </Link>
@@ -90,10 +90,10 @@ export default function MarketingDashboardPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="h-full">
                     <Card className="h-full border-none shadow-xl shadow-gray-200/40 rounded-[2rem] bg-white overflow-hidden relative group hover:shadow-gray-300/60 hover:-translate-y-1.5 transition-all duration-500">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-divyam-orange/5 rounded-bl-[100px] -z-0 transition-transform duration-500 group-hover:scale-110" />
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-hope-purple/5 rounded-bl-[100px] -z-0 transition-transform duration-500 group-hover:scale-110" />
                         <CardContent className="p-8 relative z-10 h-full flex flex-col">
-                            <div className="w-14 h-14 bg-divyam-orange/10 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110">
-                                <Building2 className="w-7 h-7 text-divyam-orange" />
+                            <div className="w-14 h-14 bg-hope-purple/10 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110">
+                                <Building2 className="w-7 h-7 text-hope-purple" />
                             </div>
                             <div className="mt-auto">
                                 <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Total Hotels Onboarded</p>
@@ -125,11 +125,11 @@ export default function MarketingDashboardPage() {
 
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="md:col-span-2 h-full">
                     <Card className="border-none shadow-xl shadow-gray-200/40 rounded-[2rem] bg-gray-900 text-white overflow-hidden relative h-full group hover:shadow-gray-900/40 hover:-translate-y-1.5 transition-all duration-500">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-divyam-orange/20 rounded-full blur-3xl -z-0 transition-opacity duration-500 group-hover:opacity-100 opacity-60" />
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-hope-purple/20 rounded-full blur-3xl -z-0 transition-opacity duration-500 group-hover:opacity-100 opacity-60" />
                         <CardContent className="p-10 relative z-10 h-full flex flex-col justify-between">
                             <div className="flex justify-between items-start">
                                 <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center border border-white/5 backdrop-blur-md transition-transform duration-500 group-hover:scale-110">
-                                    <IndianRupee className="w-7 h-7 text-divyam-orange" />
+                                    <IndianRupee className="w-7 h-7 text-hope-purple" />
                                 </div>
                                 <span className="px-4 py-1.5 bg-white/10 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/5">Your Earnings</span>
                             </div>

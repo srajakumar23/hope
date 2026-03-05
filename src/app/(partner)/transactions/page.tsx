@@ -69,8 +69,8 @@ export default function PartnerTransactionsPage() {
                 </Card>
                 <Card className="border-none bg-white shadow-xl shadow-gray-200/50">
                     <CardContent className="p-8 flex items-center gap-6">
-                        <div className="w-14 h-14 bg-divyam-orange/10 rounded-2xl flex items-center justify-center">
-                            <Calendar className="w-8 h-8 text-divyam-orange" />
+                        <div className="w-14 h-14 bg-hope-purple/10 rounded-2xl flex items-center justify-center">
+                            <Calendar className="w-8 h-8 text-hope-purple" />
                         </div>
                         <div>
                             <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Projected (This Week)</p>
@@ -126,12 +126,12 @@ export default function PartnerTransactionsPage() {
                                             <td className="px-8 py-6 text-center">
                                                 <span className={cn(
                                                     "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl text-[10px] font-black uppercase tracking-widest",
-                                                    txn.status === "Settled" ? "bg-green-100 text-green-700" : "bg-orange-100 text-orange-700"
+                                                    txn.status === "Settled" ? "bg-green-100 text-green-700" : "bg-purple-100 text-purple-800"
                                                 )}>
                                                     {txn.status}
                                                 </span>
                                             </td>
-                                            <td className="px-8 py-6 text-right font-black text-divyam-orange text-lg">
+                                            <td className="px-8 py-6 text-right font-black text-hope-purple text-lg">
                                                 {txn.comm}
                                             </td>
                                         </tr>

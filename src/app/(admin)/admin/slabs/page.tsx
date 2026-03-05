@@ -127,8 +127,8 @@ export default function AdminSlabsPage() {
                     <Card className="border-none shadow-2xl shadow-gray-200/50 bg-white h-full rounded-[2.5rem]">
                         <CardHeader className="p-10 border-b border-gray-50">
                             <div className="flex items-center gap-5">
-                                <div className="w-14 h-14 bg-divyam-orange/10 rounded-2xl flex items-center justify-center">
-                                    <Target className="w-7 h-7 text-divyam-orange" />
+                                <div className="w-14 h-14 bg-hope-purple/10 rounded-2xl flex items-center justify-center">
+                                    <Target className="w-7 h-7 text-hope-purple" />
                                 </div>
                                 <div>
                                     <CardTitle className="text-2xl font-black uppercase tracking-tight">Base Commission</CardTitle>
@@ -160,11 +160,11 @@ export default function AdminSlabsPage() {
                                             <p className="text-2xl font-black text-gray-900 tracking-tight">{referralValue.toLocaleString()}</p>
                                         </div>
                                     </div>
-                                    <div className="p-6 border border-divyam-orange/20 bg-divyam-orange/[0.03] rounded-3xl shadow-sm shadow-divyam-orange/10">
-                                        <p className="text-[10px] font-black text-divyam-orange uppercase tracking-wider mb-1">Partner Earning</p>
+                                    <div className="p-6 border border-hope-purple/20 bg-hope-purple/[0.03] rounded-3xl shadow-sm shadow-hope-purple/10">
+                                        <p className="text-[10px] font-black text-hope-purple uppercase tracking-wider mb-1">Partner Earning</p>
                                         <div className="flex items-baseline gap-1">
-                                            <span className="text-sm font-bold text-divyam-orange/50">₹</span>
-                                            <p className="text-2xl font-black text-divyam-orange tracking-tight">{(referralValue * (baseRate / 100)).toFixed(2)}</p>
+                                            <span className="text-sm font-bold text-hope-purple/50">₹</span>
+                                            <p className="text-2xl font-black text-hope-purple tracking-tight">{(referralValue * (baseRate / 100)).toFixed(2)}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +257,7 @@ export default function AdminSlabsPage() {
 
                                     <Button
                                         onClick={() => handleOpenSlabModal(i)}
-                                        variant="ghost" size="sm" className="w-full gap-2 text-gray-400 hover:text-divyam-orange hover:bg-divyam-orange/5 font-black text-[10px] uppercase tracking-widest h-10 rounded-xl transition-all"
+                                        variant="ghost" size="sm" className="w-full gap-2 text-gray-400 hover:text-hope-purple hover:bg-hope-purple/5 font-black text-[10px] uppercase tracking-widest h-10 rounded-xl transition-all"
                                     >
                                         Edit Parameters <ArrowUpRight className="w-3 h-3" />
                                     </Button>
@@ -371,8 +371,8 @@ export default function AdminSlabsPage() {
                         animate={{ scale: 1, opacity: 1 }}
                         className="relative w-full max-w-md bg-white rounded-[3rem] shadow-2xl overflow-hidden p-10 text-center"
                     >
-                        <div className="w-20 h-20 bg-divyam-orange/10 rounded-[2rem] flex items-center justify-center mx-auto mb-8">
-                            <Percent className="w-10 h-10 text-divyam-orange" />
+                        <div className="w-20 h-20 bg-hope-purple/10 rounded-[2rem] flex items-center justify-center mx-auto mb-8">
+                            <Percent className="w-10 h-10 text-hope-purple" />
                         </div>
                         <h3 className="text-3xl font-black text-gray-900 uppercase tracking-tighter mb-2">Adjust Base Rate</h3>
                         <p className="text-xs text-gray-500 font-bold uppercase tracking-widest mb-10">Affects all new partner onboarding</p>
@@ -386,7 +386,7 @@ export default function AdminSlabsPage() {
                                 onKeyDown={(e) => {
                                     if (e.key === 'Enter') handleSaveBaseRate(parseFloat((e.target as HTMLInputElement).value));
                                 }}
-                                className="w-full h-24 bg-gray-50 rounded-3xl text-5xl font-black text-center text-gray-900 focus:outline-none border-4 border-transparent focus:border-divyam-orange/20 transition-all tracking-tighter"
+                                className="w-full h-24 bg-gray-50 rounded-3xl text-5xl font-black text-center text-gray-900 focus:outline-none border-4 border-transparent focus:border-hope-purple/20 transition-all tracking-tighter"
                             />
                             <span className="absolute right-8 top-1/2 -translate-y-1/2 text-3xl font-black text-gray-300">%</span>
                         </div>
@@ -395,7 +395,7 @@ export default function AdminSlabsPage() {
                             <Button variant="ghost" className="flex-1 h-14 rounded-2xl font-black uppercase tracking-widest text-[10px]" onClick={() => setShowEditBase(false)}>
                                 Cancel
                             </Button>
-                            <Button className="flex-1 h-14 rounded-2xl font-black uppercase tracking-widest text-[10px] shadow-xl shadow-divyam-orange/20" onClick={() => {
+                            <Button className="flex-1 h-14 rounded-2xl font-black uppercase tracking-widest text-[10px] shadow-xl shadow-hope-purple/20" onClick={() => {
                                 const val = (document.querySelector('input[type="number"]') as HTMLInputElement).value;
                                 handleSaveBaseRate(parseFloat(val));
                             }}>
@@ -439,13 +439,13 @@ export default function AdminSlabsPage() {
                             {/* Meta Settings */}
                             <section className="space-y-6">
                                 <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest pl-1 flex items-center gap-2">
-                                    <Globe className="w-3 h-3 text-divyam-orange" /> Meta Configuration
+                                    <Globe className="w-3 h-3 text-hope-purple" /> Meta Configuration
                                 </h4>
                                 <div className="space-y-3">
                                     <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                         <div className="flex items-center justify-between mb-4">
                                             <span className="text-sm font-bold text-gray-600">Referral Value Base</span>
-                                            <span className="text-[10px] font-black text-divyam-orange bg-divyam-orange/10 px-2 py-1 rounded-md uppercase tracking-widest">Global</span>
+                                            <span className="text-[10px] font-black text-hope-purple bg-hope-purple/10 px-2 py-1 rounded-md uppercase tracking-widest">Global</span>
                                         </div>
                                         <div className="relative">
                                             <span className="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-gray-400">₹</span>
@@ -453,7 +453,7 @@ export default function AdminSlabsPage() {
                                                 type="number"
                                                 value={referralValue}
                                                 onChange={(e) => setReferralValue(parseInt(e.target.value) || 0)}
-                                                className="w-full h-14 bg-white rounded-xl pl-10 pr-6 font-black text-xl border-2 border-transparent focus:border-divyam-orange/20 focus:outline-none transition-all"
+                                                className="w-full h-14 bg-white rounded-xl pl-10 pr-6 font-black text-xl border-2 border-transparent focus:border-hope-purple/20 focus:outline-none transition-all"
                                             />
                                         </div>
                                         <p className="text-[10px] text-gray-400 mt-3 font-medium uppercase tracking-wide italic">Used for calculator previews & default allocations</p>

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, Timer, AlertCircle } from "lucide-react";
+import { CheckCircle2, Timer, AlertCircle, Sparkles } from "lucide-react";
 import QRCode from "react-qr-code";
 import { toast } from "sonner";
 
@@ -60,7 +60,7 @@ export default function PassDisplayPage({ params }: { params: Promise<{ guestId:
     }, [guestData, unwrappedParams.guestId]);
 
     if (loading) {
-        return <div className="min-h-screen bg-gray-900 flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-divyam-orange border-t-transparent animate-spin" /></div>;
+        return <div className="min-h-screen bg-gray-900 flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-hope-orange border-t-transparent animate-spin" /></div>;
     }
 
     if (error || !guestData) {
@@ -76,19 +76,19 @@ export default function PassDisplayPage({ params }: { params: Promise<{ guestId:
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden"
             style={{
-                background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%)",
+                background: "linear-gradient(135deg, #fdf8ff 0%, #f5f3ff 50%, #ede9fe 100%)",
             }}
         >
             {/* Subtle dot pattern overlay */}
             <div className="absolute inset-0 opacity-30"
                 style={{
-                    backgroundImage: "radial-gradient(circle, #f97316 1px, transparent 1px)",
+                    backgroundImage: "radial-gradient(circle, #7030a0 1px, transparent 1px)",
                     backgroundSize: "24px 24px",
                 }}
             />
             {/* Glow accents */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-divyam-orange/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-orange-300/30 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-hope-purple/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-300/30 rounded-full blur-3xl pointer-events-none" />
 
             <div className="w-full max-w-md relative z-10">
                 <AnimatePresence mode="wait">
@@ -103,16 +103,16 @@ export default function PassDisplayPage({ params }: { params: Promise<{ guestId:
                                 <CheckCircle2 className="w-3.5 h-3.5" /> Pass Active
                             </div>
                             <h2 className="text-4xl font-black text-gray-900 mb-2">Live Discount Pass</h2>
-                            <p className="text-orange-600 text-sm font-semibold tracking-wide">Present this secure QR to the cashier.</p>
+                            <p className="text-purple-700 text-sm font-semibold tracking-wide">Present this secure QR to the cashier.</p>
                         </div>
 
                         {/* QR Code */}
-                        <div className="bg-white p-6 rounded-[1.5rem] shadow-2xl shadow-orange-200/60 relative z-10 mx-auto w-fit mb-8 border border-orange-100">
+                        <div className="bg-white p-6 rounded-[1.5rem] shadow-2xl shadow-purple-200/60 relative z-10 mx-auto w-fit mb-8 border border-purple-100">
                             <div className="relative">
                                 <motion.div
                                     animate={{ y: [0, 192, 0] }}
                                     transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                                    className="absolute top-0 left-0 right-0 h-1 bg-divyam-orange shadow-[0_0_8px_rgba(255,122,26,0.8)] z-20 pointer-events-none"
+                                    className="absolute top-0 left-0 right-0 h-1 bg-hope-purple shadow-[0_0_8px_rgba(112,48,160,0.8)] z-20 pointer-events-none"
                                 />
                                 <div className="w-48 h-48 bg-white flex items-center justify-center rounded-xl overflow-hidden">
                                     <QRCode
@@ -127,37 +127,37 @@ export default function PassDisplayPage({ params }: { params: Promise<{ guestId:
                         </div>
 
                         <div className="w-full px-8 text-center relative z-10">
-                            <div className="flex items-center justify-center gap-2 text-divyam-orange mb-3">
+                            <div className="flex items-center justify-center gap-2 text-hope-orange mb-3">
                                 <Timer className="w-4 h-4 animate-pulse" />
                                 <span className="font-bold text-sm tracking-wide">Refreshes in {timeLeft}s</span>
                             </div>
-                            <div className="w-full h-1.5 bg-orange-200 rounded-full overflow-hidden mb-8">
+                            <div className="w-full h-1.5 bg-purple-200 rounded-full overflow-hidden mb-8">
                                 <motion.div
-                                    className="h-full bg-gradient-to-r from-divyam-orange to-orange-400 rounded-full"
+                                    className="h-full bg-gradient-to-r from-hope-purple to-hope-pink rounded-full"
                                     initial={{ width: "100%" }}
                                     animate={{ width: `${(timeLeft / 60) * 100}%` }}
                                     transition={{ duration: 1, ease: "linear" }}
                                 />
                             </div>
 
-                            <div className="bg-white border border-orange-100 rounded-2xl p-6 text-left shadow-lg shadow-orange-100/50">
+                            <div className="bg-white border border-purple-100 rounded-2xl p-6 text-left shadow-lg shadow-purple-100/50">
                                 <div className="mb-5">
-                                    <p className="text-[10px] text-orange-600 uppercase tracking-widest font-black mb-1">Guest Name</p>
+                                    <p className="text-[10px] text-purple-700 uppercase tracking-widest font-black mb-1">Guest Name</p>
                                     <p className="text-3xl font-black text-gray-900">{guestData.name}</p>
                                 </div>
                                 <div className="mb-5">
-                                    <p className="text-[10px] text-orange-600 uppercase tracking-widest font-black mb-1">Registered Mobile</p>
+                                    <p className="text-[10px] text-purple-700 uppercase tracking-widest font-black mb-1">Registered Mobile</p>
                                     <p className="text-2xl font-bold text-gray-800 tracking-widest">+91 {guestData.mobile.slice(0, 5)} {guestData.mobile.slice(5)}</p>
                                 </div>
-                                <div className="pt-4 border-t border-orange-100">
-                                    <p className="text-[10px] text-orange-600 uppercase tracking-widest font-black mb-1">Pass Authorized By</p>
-                                    <p className="text-base text-divyam-orange font-black uppercase tracking-wide">{guestData.partnerName}</p>
+                                <div className="pt-4 border-t border-purple-100">
+                                    <p className="text-[10px] text-purple-700 uppercase tracking-widest font-black mb-1">Pass Authorized By</p>
+                                    <p className="text-base text-hope-purple font-black uppercase tracking-wide">{guestData.partnerName}</p>
                                 </div>
                             </div>
 
                             <div className="mt-8">
-                                <p className="text-[10px] text-orange-400 uppercase tracking-widest flex items-center justify-center gap-1">
-                                    <AlertCircle className="w-3 h-3" /> Non-Transferable System
+                                <p className="text-[10px] text-hope-purple uppercase tracking-widest flex items-center justify-center gap-1 font-black">
+                                    <Sparkles className="w-3 h-3 text-hope-pink" /> 10% Discount Applied
                                 </p>
                             </div>
                         </div>

@@ -17,13 +17,13 @@ export default function EarningsCalculator() {
     const annualComm = monthlyComm * 12;
 
     return (
-        <Card className="border border-orange-200/50 shadow-3xl bg-gradient-to-br from-divyam-orange via-orange-500 to-orange-600 rounded-[2rem] overflow-hidden flex flex-col md:flex-row shadow-[0_20px_60px_-15px_rgba(255,122,26,0.3)]">
+        <Card className="border border-purple-200/50 shadow-3xl bg-gradient-to-br from-hope-purple via-hope-pink to-purple-700 rounded-[2rem] overflow-hidden flex flex-col md:flex-row shadow-[0_20px_60px_-15px_rgba(112,48,160,0.3)]">
             {/* Left Side: Light Mode Estimator */}
-            <div className="bg-white p-8 md:p-12 md:w-[55%] flex flex-col justify-center rounded-r-3xl md:rounded-r-[2.5rem] relative z-10 shadow-2xl shadow-orange-900/10">
+            <div className="bg-white p-8 md:p-12 md:w-[55%] flex flex-col justify-center rounded-r-3xl md:rounded-r-[2.5rem] relative z-10 shadow-2xl shadow-purple-950/10">
                 <div className="mb-10">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-100 mb-6">
-                        <Calculator className="w-3.5 h-3.5 text-divyam-orange" />
-                        <span className="text-[10px] font-black text-divyam-orange uppercase tracking-widest">Revenue Estimator</span>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-50 border border-purple-100 mb-6">
+                        <Calculator className="w-3.5 h-3.5 text-hope-purple" />
+                        <span className="text-[10px] font-black text-hope-purple uppercase tracking-widest">Revenue Estimator</span>
                     </div>
                     <h3 className="text-3xl font-black text-gray-900 tracking-tight leading-none mb-3">Estimate Your<br />Earnings</h3>
                     <p className="text-gray-500 text-sm font-medium leading-relaxed">See how much you could earn by referring your guests.</p>
@@ -42,7 +42,7 @@ export default function EarningsCalculator() {
                             step="5"
                             value={guests}
                             onChange={(e) => setGuests(parseInt(e.target.value))}
-                            className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-divyam-orange"
+                            className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-hope-purple"
                         />
                     </div>
 
@@ -58,7 +58,7 @@ export default function EarningsCalculator() {
                             step="100"
                             value={avgBill}
                             onChange={(e) => setAvgBill(parseInt(e.target.value))}
-                            className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-divyam-orange"
+                            className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-hope-purple"
                         />
                     </div>
 
@@ -74,7 +74,7 @@ export default function EarningsCalculator() {
                             step="0.5"
                             value={commission}
                             onChange={(e) => setCommission(parseFloat(e.target.value))}
-                            className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-divyam-orange"
+                            className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-hope-purple"
                         />
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export default function EarningsCalculator() {
             <div className="bg-transparent p-8 md:p-12 md:w-[45%] flex flex-col justify-center relative -ml-6 md:-ml-8 z-0">
                 <div className="space-y-10 pl-6 md:pl-10">
                     <div>
-                        <p className="text-orange-100 text-[10px] font-black uppercase tracking-[0.2em] mb-3">Estimated Monthly Income</p>
+                        <p className="text-purple-100 text-[10px] font-black uppercase tracking-[0.2em] mb-3">Estimated Monthly Income</p>
                         <motion.p
                             key={monthlyComm}
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -96,19 +96,19 @@ export default function EarningsCalculator() {
                     </div>
 
                     <div className="pt-8 border-t border-white/20">
-                        <p className="text-orange-100 text-[10px] font-black uppercase tracking-[0.2em] mb-2">Annual Potential</p>
+                        <p className="text-purple-100 text-[10px] font-black uppercase tracking-[0.2em] mb-2">Annual Potential</p>
                         <p className="text-2xl font-black text-yellow-200 tracking-tight">₹{annualComm.toLocaleString(undefined, { maximumFractionDigits: 0 })}</p>
                     </div>
 
                     <div className="pt-6">
                         <Link href="/register" className="w-full block">
-                            <Button className="w-full h-14 bg-white text-divyam-orange hover:bg-orange-50 rounded-2xl font-bold text-sm lg:text-base transition-all shadow-xl shadow-black/10 hover:scale-[1.02] group px-4" aria-label="Start earning now with Divyam">
+                            <Button className="w-full h-14 bg-white text-hope-purple hover:bg-purple-50 rounded-2xl font-bold text-sm lg:text-base transition-all shadow-xl shadow-black/10 hover:scale-[1.02] group px-4" aria-label="Start earning now with HOPE Cafe">
                                 <span className="flex items-center justify-center whitespace-nowrap gap-2">
                                     Start Earning Now <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Button>
                         </Link>
-                        <p className="text-[10px] text-orange-200 mt-5 text-center font-medium italic">
+                        <p className="text-[10px] text-purple-200 mt-5 text-center font-medium italic">
                             *Based on selected {commission}% commission slab.
                         </p>
                     </div>

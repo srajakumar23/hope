@@ -47,7 +47,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         {/* Dynamic Background Gradients */}
-        <div className="absolute top-0 right-0 -z-10 w-[80%] h-full bg-gradient-to-bl from-divyam-orange/20 via-orange-300/5 to-transparent blur-[120px] opacity-60" />
+        <div className="absolute top-0 right-0 -z-10 w-[80%] h-full bg-gradient-to-bl from-hope-purple/20 via-purple-300/5 to-transparent blur-[120px] opacity-60" />
         <div className="absolute top-1/2 left-0 -translate-y-1/2 -z-10 w-[60%] h-[80%] bg-gradient-to-tr from-blue-500/10 via-transparent to-transparent blur-[100px] opacity-40" />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10 text-center">
@@ -55,8 +55,8 @@ export default function Home() {
             {...fadeInUp}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/60 backdrop-blur-md border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-10 hover:-translate-y-1 transition-transform cursor-default"
           >
-            <Sparkles className="w-4 h-4 text-divyam-orange animate-pulse" />
-            <span className="text-xs font-black text-transparent bg-clip-text bg-gradient-to-r from-divyam-orange to-orange-500 uppercase tracking-[0.2em]">Divine Hospitality Network</span>
+            <Sparkles className="w-4 h-4 text-hope-purple animate-pulse" />
+            <span className="text-xs font-black text-transparent bg-clip-text bg-gradient-to-r from-hope-purple to-hope-pink uppercase tracking-[0.2em]">HOPE Cafe</span>
           </motion.div>
 
           <motion.h1
@@ -64,11 +64,11 @@ export default function Home() {
             transition={{ delay: 0.1, duration: 0.8 }}
             className="text-6xl md:text-8xl lg:text-[7.5rem] font-black text-gray-900 mb-8 tracking-tighter leading-[0.9]"
           >
-            Divyam Channel <br />
+            HOPE Cafe <br />
             <span className="relative inline-block mt-4 md:mt-2">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-divyam-orange to-orange-500 relative z-10">Partner Hub</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-hope-purple to-hope-pink relative z-10">Partner Hub</span>
               {/* Highlight stroke behind text */}
-              <div className="absolute inset-x-0 bottom-2 md:bottom-4 h-[30%] bg-orange-100 -z-0 -rotate-2 scale-110 blur-[2px]" />
+              <div className="absolute inset-x-0 bottom-2 md:bottom-4 h-[30%] bg-purple-100 -z-0 -rotate-2 scale-110 blur-[2px]" />
             </span>
           </motion.h1>
 
@@ -77,10 +77,10 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-600 mb-14 max-w-3xl mx-auto leading-relaxed font-medium"
           >
-            Empowering the local hospitality ecosystem. Refer guests to Divyam Café and unlock a
+            Empowering the local hospitality ecosystem. Refer guests to HOPE Cafe and unlock a
             <span className="text-gray-900 font-extrabold mx-2 relative whitespace-nowrap">
               <span className="relative z-10">7.5% referral commission</span>
-              <svg className="absolute w-full h-full -bottom-1 left-0 text-divyam-orange/30 -z-0" viewBox="0 0 100 20" preserveAspectRatio="none">
+              <svg className="absolute w-full h-full -bottom-1 left-0 text-hope-purple/30 -z-0" viewBox="0 0 100 20" preserveAspectRatio="none">
                 <path d="M0,15 Q50,25 100,10" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
               </svg>
             </span>
@@ -93,13 +93,13 @@ export default function Home() {
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
             <Link href="/register" className="w-full sm:w-auto relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-divyam-orange to-orange-500 rounded-full blur-lg opacity-40 group-hover:opacity-60 group-hover:blur-xl transition-all duration-500" />
-              <Button size="lg" className="w-full relative bg-gradient-to-r from-divyam-orange to-orange-500 hover:from-orange-500 hover:to-divyam-orange border-0 h-14 px-10 text-lg rounded-full shadow-xl transition-all hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-r from-hope-purple to-hope-pink rounded-full blur-lg opacity-40 group-hover:opacity-60 group-hover:blur-xl transition-all duration-500" />
+              <Button size="lg" className="w-full relative bg-gradient-to-r from-hope-purple to-hope-pink hover:from-hope-pink hover:to-hope-purple border-0 h-14 px-10 text-lg rounded-full shadow-xl transition-all hover:-translate-y-1">
                 Become a Partner <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/login" className="w-full sm:w-auto">
-              <Button variant="outline" size="lg" className="w-full h-14 px-10 text-lg rounded-full border-2 border-gray-200 hover:border-divyam-orange/50 hover:bg-orange-50/50 text-gray-700 bg-white/50 backdrop-blur-sm transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+              <Button variant="outline" size="lg" className="w-full h-14 px-10 text-lg rounded-full border-2 border-gray-200 hover:border-hope-purple/50 hover:bg-purple-50/50 text-gray-700 bg-white/50 backdrop-blur-sm transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
                 Partner Dashboard
               </Button>
             </Link>
@@ -131,7 +131,7 @@ export default function Home() {
           >
             {[
               { title: "₹500 Joining Bonus", desc: "Instant wallet credit upon verification of your partner profile.", icon: Zap, color: "text-blue-600", bg: "bg-blue-100/50", border: "hover:border-blue-200" },
-              { title: "7.5% Commission", desc: "Highest-in-class referral fee for every single bill generated at Divyam Café.", icon: TrendingUp, color: "text-divyam-orange", bg: "bg-divyam-orange/10", featured: true, border: "border-divyam-orange/20" },
+              { title: "7.5% Commission", desc: "Highest-in-class referral fee for every single bill generated at HOPE Cafe.", icon: TrendingUp, color: "text-hope-purple", bg: "bg-hope-purple/10", featured: true, border: "border-hope-purple/20" },
               { title: "Real-time Payouts", desc: "Track earnings live and withdraw weekly directly to your bank account.", icon: Wallet, color: "text-emerald-600", bg: "bg-emerald-100/50", border: "hover:border-emerald-200" },
             ].map((benefit, idx) => (
               <motion.div key={idx} variants={fadeInUp} className="group h-full">
@@ -158,11 +158,11 @@ export default function Home() {
       </section>
 
       {/* Who Can Join Section */}
-      <section className="py-24 bg-orange-50/30 border-y border-orange-100/50">
+      <section className="py-24 bg-purple-50/30 border-y border-purple-100/50">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">Who Can Join as a Partner?</h2>
-            <p className="text-gray-500 mt-3 font-medium">Any tourism-facing business can earn commission by referring guests to Divyam Café.</p>
+            <p className="text-gray-500 mt-3 font-medium">Any tourism-facing business can earn commission by referring guests to HOPE Cafe.</p>
           </div>
 
           <motion.div
@@ -187,8 +187,8 @@ export default function Home() {
               { icon: "🎉", label: "Event Organizers", desc: "Group dining & events" },
             ].map((item, idx) => (
               <motion.div key={idx} variants={fadeInUp} className="w-[calc(50%-8px)] sm:w-[calc(33.33%-11px)] lg:w-[calc(25%-12px)]">
-                <div className="group flex items-start gap-3 px-5 py-5 bg-white border border-orange-100 rounded-2xl shadow-sm hover:shadow-md hover:border-divyam-orange/30 hover:-translate-y-1 transition-all cursor-default h-full">
-                  <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center shrink-0 text-xl">
+                <div className="group flex items-start gap-3 px-5 py-5 bg-white border border-purple-100 rounded-2xl shadow-sm hover:shadow-md hover:border-hope-purple/30 hover:-translate-y-1 transition-all cursor-default h-full">
+                  <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center shrink-0 text-xl">
                     {item.icon}
                   </div>
                   <div>
@@ -205,7 +205,7 @@ export default function Home() {
       {/* How it Works */}
       <section className="py-32 bg-gradient-to-b from-white to-gray-50/50 relative overflow-hidden">
         {/* Premium atmospheric elements */}
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-divyam-orange/5 rounded-full blur-[100px] -z-10 animate-pulse pointer-events-none" />
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-hope-purple/5 rounded-full blur-[100px] -z-10 animate-pulse pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[80px] -z-10 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
@@ -217,14 +217,14 @@ export default function Home() {
             className="text-center mb-20"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-gray-100 shadow-sm mb-6">
-              <span className="w-2 h-2 rounded-full bg-divyam-orange animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-hope-purple animate-pulse" />
               <span className="text-xs font-bold text-gray-600 uppercase tracking-widest">Process</span>
             </div>
             <h2 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter mb-6 relative inline-block">
               The Partner Workflow
             </h2>
             <p className="text-gray-500 text-xl md:text-2xl font-medium max-w-2xl mx-auto">
-              Simple. Transparent. <span className="text-gray-900 font-bold decoration-divyam-orange decoration-4 underline-offset-4 underline">Rewarding.</span>
+              Simple. Transparent. <span className="text-gray-900 font-bold decoration-hope-purple decoration-4 underline-offset-4 underline">Rewarding.</span>
             </p>
           </motion.div>
 
@@ -234,7 +234,7 @@ export default function Home() {
 
             {[
               { id: "01", title: "Apply", desc: "Quick registration with basic business details.", icon: UserPlus },
-              { id: "02", title: "Verify", desc: "KYC review by the Divyam management team.", icon: ShieldCheck },
+              { id: "02", title: "Verify", desc: "KYC review by the HOPE Cafe management team.", icon: ShieldCheck },
               { id: "03", title: "Engage", desc: "Share your unique QR code with your travellers.", icon: QrCode },
               { id: "04", title: "Earn", desc: "Automated 7.5% credit on every scan result.", icon: Banknote },
             ].map((step, idx) => (
@@ -247,16 +247,16 @@ export default function Home() {
                 className="relative z-10 flex flex-col items-center group cursor-default"
               >
                 {/* Number Node */}
-                <div className="w-24 h-24 bg-white rounded-3xl shadow-xl shadow-gray-200/50 flex flex-col items-center justify-center mb-8 relative group-hover:-translate-y-3 group-hover:shadow-2xl group-hover:shadow-divyam-orange/20 transition-all duration-500 border border-gray-50 ring-4 ring-white">
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-divyam-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1 group-hover:text-divyam-orange/80 transition-colors">Step</span>
-                  <span className="text-4xl font-black text-gray-900 group-hover:text-divyam-orange transition-colors z-10 leading-none">{step.id}</span>
+                <div className="w-24 h-24 bg-white rounded-3xl shadow-xl shadow-gray-200/50 flex flex-col items-center justify-center mb-8 relative group-hover:-translate-y-3 group-hover:shadow-2xl group-hover:shadow-hope-purple/20 transition-all duration-500 border border-gray-50 ring-4 ring-white">
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-hope-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1 group-hover:text-hope-purple/80 transition-colors">Step</span>
+                  <span className="text-4xl font-black text-gray-900 group-hover:text-hope-purple transition-colors z-10 leading-none">{step.id}</span>
                 </div>
 
                 {/* Content Card */}
-                <div className="bg-white/70 backdrop-blur-xl p-8 rounded-[2rem] text-center shadow-lg shadow-gray-100/50 border border-white group-hover:border-divyam-orange/20 transition-all duration-500 w-full flex-1">
-                  <div className="w-12 h-12 rounded-2xl bg-gray-50 group-hover:bg-divyam-orange/10 flex items-center justify-center mx-auto mb-6 transition-colors duration-500">
-                    <step.icon className="w-6 h-6 text-gray-600 group-hover:text-divyam-orange transition-colors duration-500" />
+                <div className="bg-white/70 backdrop-blur-xl p-8 rounded-[2rem] text-center shadow-lg shadow-gray-100/50 border border-white group-hover:border-hope-purple/20 transition-all duration-500 w-full flex-1">
+                  <div className="w-12 h-12 rounded-2xl bg-gray-50 group-hover:bg-hope-purple/10 flex items-center justify-center mx-auto mb-6 transition-colors duration-500">
+                    <step.icon className="w-6 h-6 text-gray-600 group-hover:text-hope-purple transition-colors duration-500" />
                   </div>
                   <h4 className="text-2xl font-black text-gray-900 mb-4">{step.title}</h4>
                   <p className="text-base text-gray-500 font-medium leading-relaxed">{step.desc}</p>
@@ -268,9 +268,9 @@ export default function Home() {
       </section>
 
       {/* Calculator Section */}
-      <section className="py-32 bg-orange-50 relative overflow-hidden">
+      <section className="py-32 bg-purple-50 relative overflow-hidden">
         {/* Dynamic Light Gradients */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-divyam-orange/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-hope-purple/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -282,16 +282,16 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="xl:col-span-2 space-y-8"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-orange-200/50 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-divyam-orange animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 border border-purple-200/50 shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-hope-purple animate-pulse" />
                 <span className="text-xs font-bold text-gray-600 uppercase tracking-widest">Revenue Model</span>
               </div>
               <h2 className="text-5xl md:text-6xl font-black text-gray-900 tracking-tighter leading-tight">
                 Calculate Your <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-divyam-orange to-orange-500">Growth Margin.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-hope-purple to-hope-pink">Growth Margin.</span>
               </h2>
               <p className="text-gray-600 text-lg md:text-xl font-medium leading-relaxed">
-                We believe in shared prosperity. By connecting your hospitality business to Divyam, you don't just refer guests—you build a sustainable revenue stream.
+                We believe in shared prosperity. By connecting your hospitality business to HOPE Cafe, you don't just refer guests—you build a sustainable revenue stream.
               </p>
               <div className="space-y-5 pt-4">
                 {[
@@ -307,8 +307,8 @@ export default function Home() {
                     key={i}
                     className="flex gap-4 items-center group"
                   >
-                    <div className="w-8 h-8 rounded-full bg-white border border-orange-100 flex items-center justify-center shadow-sm group-hover:bg-divyam-orange/10 group-hover:border-divyam-orange/20 transition-colors">
-                      <CheckCircle2 className="w-4 h-4 text-divyam-orange" />
+                    <div className="w-8 h-8 rounded-full bg-white border border-purple-100 flex items-center justify-center shadow-sm group-hover:bg-hope-purple/10 group-hover:border-hope-purple/20 transition-colors">
+                      <CheckCircle2 className="w-4 h-4 text-hope-purple" />
                     </div>
                     <span className="text-base font-bold text-gray-700 group-hover:text-gray-900 transition-colors">{item}</span>
                   </motion.div>
@@ -323,7 +323,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="xl:col-span-3 relative"
             >
-              <div className="absolute inset-0 bg-divyam-orange/20 rounded-[3rem] blur-2xl -z-10" />
+              <div className="absolute inset-0 bg-hope-purple/20 rounded-[3rem] blur-2xl -z-10" />
               <div className="bg-white/40 backdrop-blur-3xl border border-white/50 rounded-[2.5rem] p-2 shadow-2xl overflow-hidden">
                 <div className="bg-white rounded-[2.25rem] overflow-hidden">
                   <EarningsCalculator />
@@ -355,7 +355,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="text-gray-500 text-xl font-medium max-w-2xl mx-auto"
             >
-              Everything you need to know about joining the Divyam Channel Partner Network.
+              Everything you need to know about joining the HOPE Cafe Channel Partner Network.
             </motion.p>
           </div>
 
@@ -372,7 +372,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative pt-20 pb-12 bg-gradient-to-br from-divyam-orange via-orange-500 to-orange-600 border-t border-orange-400/50 overflow-hidden">
+      <footer className="relative pt-20 pb-12 bg-gradient-to-br from-hope-purple via-hope-pink to-purple-700 border-t border-hope-purple/50 overflow-hidden">
         {/* Footer Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-white/50 to-transparent" />
         <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/10 rounded-full blur-[100px] pointer-events-none" />
@@ -380,32 +380,32 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-10 border-b border-white/20 pb-10 mb-10">
             <Link href="/" className="flex items-center gap-4 group">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-black/10 group-hover:scale-110 transition-transform duration-500">
-                <span className="text-divyam-orange text-2xl font-bold">✧</span>
+              <div className="w-14 h-14 relative group-hover:scale-110 transition-transform duration-500">
+                <img src="/logo.png" alt="HOPE Cafe" className="w-full h-full object-contain filter brightness-0 invert" />
               </div>
               <div className="flex flex-col text-left">
-                <span className="text-white text-xl font-black leading-none tracking-tight">Divyam</span>
-                <span className="text-[10px] text-orange-100 uppercase tracking-[0.2em] font-black mt-1">Hospitality</span>
+                <span className="text-white text-xl font-black leading-none tracking-tight">HOPE Cafe</span>
+                <span className="text-[10px] text-purple-100 uppercase tracking-[0.2em] font-black mt-1">Hospitality</span>
               </div>
             </Link>
 
             <div className="flex items-center gap-8">
-              <Link href="/login" className="text-sm font-bold text-orange-100 hover:text-white transition-colors">
+              <Link href="/login" className="text-sm font-bold text-purple-100 hover:text-white transition-colors">
                 Partner Login
               </Link>
-              <Link href="/register" className="text-sm font-bold text-white hover:text-orange-100 transition-colors">
+              <Link href="/register" className="text-sm font-bold text-white hover:text-purple-100 transition-colors">
                 Apply Now
               </Link>
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-orange-200 text-xs font-bold tracking-[0.2em] uppercase">
-              &copy; {new Date().getFullYear()} Divyam Hospitality Network.
+            <p className="text-purple-200 text-xs font-bold tracking-[0.2em] uppercase">
+              &copy; {new Date().getFullYear()} HOPE Cafe.
             </p>
             <div className="flex items-center gap-6">
               {['Terms', 'Privacy', 'Contact'].map((item) => (
-                <span key={item} className="text-orange-200 text-xs font-bold tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
+                <span key={item} className="text-purple-200 text-xs font-bold tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
                   {item}
                 </span>
               ))}

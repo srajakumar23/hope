@@ -55,8 +55,8 @@ export default function PartnerLoginPage() {
             >
                 <Card className="border-none shadow-2xl overflow-hidden">
                     <CardHeader className="text-center pt-10">
-                        <div className="w-16 h-16 bg-divyam-orange/5 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <span className="text-3xl text-divyam-orange">✧</span>
+                        <div className="w-16 h-16 bg-hope-purple/5 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <span className="text-3xl text-hope-purple">✧</span>
                         </div>
                         <CardTitle className="text-3xl font-black">Partner Login</CardTitle>
                         <p className="text-gray-400 mt-2 font-medium">Access your global referral center</p>
@@ -81,7 +81,7 @@ export default function PartnerLoginPage() {
                             <div className="space-y-2">
                                 <div className="flex justify-between items-center ml-1">
                                     <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Password</label>
-                                    <Link href="#" className="text-[10px] font-black text-divyam-orange uppercase tracking-widest hover:underline">Forgot?</Link>
+                                    <Link href="#" className="text-[10px] font-black text-hope-purple uppercase tracking-widest hover:underline">Forgot?</Link>
                                 </div>
                                 <div className="relative">
                                     <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -103,11 +103,11 @@ export default function PartnerLoginPage() {
                             <div className="pt-6 border-t border-gray-50 text-center space-y-4">
                                 <div className="p-4 bg-gray-50 border border-gray-100 rounded-2xl">
                                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Demo Credentials</p>
-                                    <p className="text-xs text-gray-600 font-bold">Password: <span className="text-divyam-orange text-sm">partner2026</span></p>
+                                    <p className="text-xs text-gray-600 font-bold">Password: <span className="text-hope-purple text-sm">partner2026</span></p>
                                 </div>
                                 <p className="text-sm font-medium text-gray-400">
                                     New to the network?{" "}
-                                    <Link href="/register" className="text-divyam-orange font-bold hover:underline">Register Hub</Link>
+                                    <Link href="/register" className="text-hope-purple font-bold hover:underline">Register Hub</Link>
                                 </p>
                             </div>
                         </form>

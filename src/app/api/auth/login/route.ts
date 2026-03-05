@@ -10,11 +10,11 @@ export async function POST(req: Request) {
         const { role, mobile, email, password } = body;
 
         // In a real app, verify the password Hash.
-        // For Hope Cafe demo, we just simplify. Admin expects generic auth.
+        // For HOPE Cafe demo, we just simplify. Admin expects generic auth.
 
         if (role === "ADMIN") {
             // Simplified admin login
-            if (password === "admin123" || password === "divyam2026") { // simplistic master password
+            if (password === "admin123" || password === "hope2026") { // simplistic master password
                 await login({ role: "ADMIN", id: "admin-1" });
                 return NextResponse.json({ success: true, redirectUrl: "/admin/dashboard" });
             }

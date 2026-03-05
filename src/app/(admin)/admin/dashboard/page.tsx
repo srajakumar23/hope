@@ -153,7 +153,7 @@ export default function AdminDashboard() {
 
     const metrics = [
         { label: "Active Partners", value: stats.totalPartners, icon: Users, color: "text-gray-500" },
-        { label: "Pending Approvals", value: stats.pendingApprovals, icon: Clock, color: "text-divyam-orange", highlight: parseInt(stats.pendingApprovals) > 0 },
+        { label: "Pending Approvals", value: stats.pendingApprovals, icon: Clock, color: "text-hope-purple", highlight: parseInt(stats.pendingApprovals) > 0 },
         { label: "Monthly Revenue", value: stats.monthlyRevenue, icon: BarChart3, color: "text-green-500" },
         { label: "Avg Commission", value: stats.avgCommission, icon: Target, color: "text-gray-500" },
     ];
@@ -169,7 +169,7 @@ export default function AdminDashboard() {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                         <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight flex items-center gap-4">
-                            <ShieldCheck className="text-divyam-orange w-10 h-10" />
+                            <ShieldCheck className="text-hope-purple w-10 h-10" />
                             Management Hub
                         </h1>
                         <p className="text-gray-500 mt-1 font-medium">Enterprise oversight for the Divyam Referral Network.</p>
@@ -183,7 +183,7 @@ export default function AdminDashboard() {
                             <Settings className="w-4 h-4 mr-2" /> System Logs
                         </Button>
                         <Button
-                            className="flex items-center justify-center gap-2.5 shadow-divyam-orange/20 h-11 px-8 rounded-2xl"
+                            className="flex items-center justify-center gap-2.5 shadow-hope-purple/20 h-11 px-8 rounded-2xl"
                             aria-label="Process batch settlement for partners"
                             onClick={() => {
                                 if (confirm("Proceed with batch settlement for all eligible partners?")) {
@@ -201,7 +201,7 @@ export default function AdminDashboard() {
                         <motion.div key={idx} variants={item} className="h-full">
                             <Card className={cn(
                                 "h-full border-none bg-white shadow-2xl shadow-gray-200/50 hover:shadow-gray-300/60 transition-all duration-500 hover:-translate-y-2 cursor-pointer group",
-                                s.highlight && "ring-2 ring-divyam-orange/20"
+                                s.highlight && "ring-2 ring-hope-purple/20"
                             )}>
                                 <CardContent className="p-8 h-full flex flex-col">
                                     <div className="flex justify-between items-center mb-6">
@@ -209,7 +209,7 @@ export default function AdminDashboard() {
                                             idx === 2 ? "bg-green-50" : "bg-gray-50")}>
                                             <s.icon className={cn("w-7 h-7 shrink-0", s.color)} />
                                         </div>
-                                        {s.highlight && <span className="text-[10px] font-black text-divyam-orange uppercase tracking-[1px] bg-divyam-orange/10 px-3 py-1 rounded-full animate-pulse">Action Required</span>}
+                                        {s.highlight && <span className="text-[10px] font-black text-hope-purple uppercase tracking-[1px] bg-hope-purple/10 px-3 py-1 rounded-full animate-pulse">Action Required</span>}
                                     </div>
                                     <div className="mt-auto">
                                         <h3 className="text-[10px] font-black text-gray-500 uppercase tracking-widest min-h-[20px]">{s.label}</h3>
@@ -230,7 +230,7 @@ export default function AdminDashboard() {
                                 <Button
                                     variant="ghost"
                                     size="sm"
-                                    className="text-divyam-orange hover:bg-divyam-orange/10 font-black uppercase tracking-widest text-[11px] h-9 px-4 rounded-xl"
+                                    className="text-hope-purple hover:bg-hope-purple/10 font-black uppercase tracking-widest text-[11px] h-9 px-4 rounded-xl"
                                     aria-label="View pending partner approval queue"
                                     onClick={() => toast.info("Partner Directory contains full audit details.")}
                                 >
@@ -251,10 +251,10 @@ export default function AdminDashboard() {
                                                 initial={{ opacity: 0, x: -20 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{ delay: i * 0.1 }}
-                                                className="flex items-center justify-between p-6 bg-gray-50/50 rounded-[2rem] border border-gray-100 group hover:border-divyam-orange/30 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40"
+                                                className="flex items-center justify-between p-6 bg-gray-50/50 rounded-[2rem] border border-gray-100 group hover:border-hope-purple/30 transition-all hover:bg-white hover:shadow-xl hover:shadow-gray-200/40"
                                             >
                                                 <div className="flex items-center gap-5">
-                                                    <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center font-black text-divyam-orange text-2xl border border-gray-50 transition-transform group-hover:scale-110">
+                                                    <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center font-black text-hope-purple text-2xl border border-gray-50 transition-transform group-hover:scale-110">
                                                         {partner.name[0]}
                                                     </div>
                                                     <div>
@@ -268,7 +268,7 @@ export default function AdminDashboard() {
                                                 <div className="flex items-center gap-3">
                                                     <Button
                                                         size="icon"
-                                                        className="bg-divyam-orange shadow-lg shadow-divyam-orange/30 text-white rounded-2xl hover:bg-divyam-orange/90 border-none w-12 h-12 transition-transform hover:scale-110 active:scale-95"
+                                                        className="bg-hope-purple shadow-lg shadow-hope-purple/30 text-white rounded-2xl hover:bg-hope-purple/90 border-none w-12 h-12 transition-transform hover:scale-110 active:scale-95"
                                                         onClick={() => updatePartnerStatus(partner.id, "ACTIVE")}
                                                         aria-label="Approve Partner"
                                                     >
@@ -300,7 +300,7 @@ export default function AdminDashboard() {
                             <CardContent className="px-8 pb-8 space-y-4">
                                 <div className="flex justify-between items-center p-5 bg-gray-50 rounded-2xl border border-gray-100">
                                     <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Standard Rate</span>
-                                    <span className="text-2xl font-black text-divyam-orange">7.5%</span>
+                                    <span className="text-2xl font-black text-hope-purple">7.5%</span>
                                 </div>
                                 <div className="flex justify-between items-center p-5 bg-gray-50 rounded-2xl border border-gray-100">
                                     <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">Welcome Bonus</span>
@@ -316,13 +316,13 @@ export default function AdminDashboard() {
                             </CardContent>
                         </Card>
 
-                        <Card className="bg-divyam-orange border-none shadow-xl shadow-divyam-orange/20 rounded-[2.5rem] overflow-hidden relative">
+                        <Card className="bg-hope-purple border-none shadow-xl shadow-hope-purple/20 rounded-[2.5rem] overflow-hidden relative">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16" />
                             <CardContent className="p-10 text-center relative z-10">
                                 <p className="text-white/70 text-[10px] font-black uppercase tracking-[0.2em] mb-2">Total Owed</p>
                                 <p className="text-5xl font-black text-white mb-8 drop-shadow-lg">{stats.totalOwed}</p>
                                 <Button
-                                    className="w-full bg-white text-divyam-orange hover:bg-white/90 border-none shadow-xl shadow-black/10 h-14 text-sm font-black uppercase tracking-widest rounded-2xl"
+                                    className="w-full bg-white text-hope-purple hover:bg-white/90 border-none shadow-xl shadow-black/10 h-14 text-sm font-black uppercase tracking-widest rounded-2xl"
                                     onClick={() => {
                                         if (confirm("Send payout processing requests to all partners?")) {
                                             runPayouts();
@@ -380,7 +380,7 @@ export default function AdminDashboard() {
                                         <div className={cn(
                                             "absolute left-0 top-1 w-[24px] h-[24px] rounded-full flex items-center justify-center z-10",
                                             log.type === "TRANSACTION" ? "bg-green-100 text-green-600" :
-                                                log.type === "PARTNER" ? "bg-divyam-orange/10 text-divyam-orange" :
+                                                log.type === "PARTNER" ? "bg-hope-purple/10 text-hope-purple" :
                                                     "bg-purple-100 text-purple-600"
                                         )}>
                                             <div className="w-2 h-2 rounded-full bg-current" />

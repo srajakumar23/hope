@@ -80,10 +80,10 @@ export default function GuestRegistrationPage({ params }: { params: Promise<{ pa
             <div className="w-full max-w-md">
                 {/* Header Branding */}
                 <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-divyam-orange rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl shadow-divyam-orange/20">
+                    <div className="w-16 h-16 bg-hope-purple rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl shadow-hope-purple/20">
                         <span className="text-white text-3xl font-bold">✧</span>
                     </div>
-                    <h1 className="text-2xl font-black text-gray-900">Hope Cafe</h1>
+                    <h1 className="text-2xl font-black text-gray-900">HOPE Cafe</h1>
                     <p className="text-gray-500 font-medium text-sm mt-1">Special Guest Pass via {partnerName}</p>
                 </div>
 
@@ -115,7 +115,7 @@ export default function GuestRegistrationPage({ params }: { params: Promise<{ pa
                                             type="text"
                                             value={name}
                                             onChange={(e) => setName(e.target.value)}
-                                            className="block w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl text-lg font-bold text-gray-900 focus:ring-2 focus:ring-divyam-orange focus:border-divyam-orange transition-all placeholder:text-gray-300 placeholder:font-normal"
+                                            className="block w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl text-lg font-bold text-gray-900 focus:ring-2 focus:ring-hope-purple focus:border-hope-purple transition-all placeholder:text-gray-300 placeholder:font-normal"
                                             placeholder="John Doe"
                                             required
                                         />
@@ -134,7 +134,7 @@ export default function GuestRegistrationPage({ params }: { params: Promise<{ pa
                                             maxLength={10}
                                             value={mobile}
                                             onChange={(e) => setMobile(e.target.value.replace(/\D/g, ''))}
-                                            className="block w-full pl-20 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl text-lg font-bold text-gray-900 focus:ring-2 focus:ring-divyam-orange focus:border-divyam-orange transition-all placeholder:text-gray-300 placeholder:font-normal"
+                                            className="block w-full pl-20 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl text-lg font-bold text-gray-900 focus:ring-2 focus:ring-hope-purple focus:border-hope-purple transition-all placeholder:text-gray-300 placeholder:font-normal"
                                             placeholder="99999 99999"
                                             required
                                         />
@@ -173,7 +173,7 @@ export default function GuestRegistrationPage({ params }: { params: Promise<{ pa
                             </p>
 
                             <div className="bg-gray-50 rounded-xl p-4 border border-gray-100 mb-8">
-                                <p className="text-sm text-gray-600">Please open the WhatsApp message from Hope Cafe and click the link to claim your benefits at the cashier.</p>
+                                <p className="text-sm text-gray-600">Please open the WhatsApp message from HOPE Cafe and click the link to claim your benefits at the cashier.</p>
                             </div>
 
                             {/* Developer Link for Testing Purposes */}

@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-divyam-orange: #FF7A1A;
-  --color-surface-light: #FFFAF5;
+  --color-hope-purple: #7030A0;
+  --color-hope-pink: #D81B60;
+  --color-hope-green: #2D5A27;
+  --color-surface-light: #FDF8FF;
   --color-admin-navy: #101827;
 
   --font-inter: "Inter", sans-serif;
@@ -14,8 +16,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --divyam-orange: #FF7A1A;
-  --surface-light: #FFFAF5;
+  --hope-purple: #7030A0;
+  --hope-pink: #D81B60;
+  --hope-green: #2D5A27;
+  --surface-light: #FDF8FF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,7 +37,7 @@ body {
 
 @layer utilities {
   .btn-primary {
-    @apply bg-divyam-orange text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-all;
+    @apply bg-hope-purple text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-all;
   }
 
   .card {

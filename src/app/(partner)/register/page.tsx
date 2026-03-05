@@ -59,7 +59,7 @@ export default function RegisterPage() {
                 <Card className="overflow-hidden border-none shadow-2xl">
                     <div className="grid grid-cols-1 md:grid-cols-5 h-full">
                         {/* Sidebar info */}
-                        <div className="md:col-span-2 bg-divyam-orange p-10 text-white flex flex-col justify-between">
+                        <div className="md:col-span-2 bg-hope-purple p-10 text-white flex flex-col justify-between">
                             <div>
                                 <h2 className="text-3xl font-bold mb-6">Join the Elite Network</h2>
                                 <div className="space-y-6">
@@ -117,7 +117,7 @@ export default function RegisterPage() {
                                         <label className="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Business Type</label>
                                         <select
                                             {...register("businessType")}
-                                            className="flex h-12 w-full rounded-2xl border-2 bg-white px-4 py-2 text-sm transition-all border-gray-100 focus:border-divyam-orange outline-none"
+                                            className="flex h-12 w-full rounded-2xl border-2 bg-white px-4 py-2 text-sm transition-all border-gray-100 focus:border-hope-purple outline-none"
                                         >
                                             <option value="">Select Type</option>
                                             <option value="rental">Bike/Car Rental</option>

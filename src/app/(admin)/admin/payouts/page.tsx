@@ -55,7 +55,7 @@ export default function AdminPayoutsPage() {
                     <Button variant="outline" className="gap-2 h-11" onClick={() => toast.success("Settlement report ready for download.")}>
                         <Download className="w-4 h-4" /> Download Statement
                     </Button>
-                    <Button className="gap-2 h-11 bg-divyam-orange hover:bg-orange-600 text-white px-6">
+                    <Button className="gap-2 h-11 bg-hope-purple hover:bg-purple-700 text-white px-6">
                         <TrendingUp className="w-4 h-4" /> Batch Settlement
                     </Button>
                 </div>
@@ -66,8 +66,8 @@ export default function AdminPayoutsPage() {
                     <Card className="border-none bg-white shadow-xl shadow-gray-200/50">
                         <CardContent className="p-8">
                             <div className="flex items-center justify-between mb-6">
-                                <div className="w-12 h-12 bg-divyam-orange/10 rounded-2xl flex items-center justify-center">
-                                    <Wallet className="w-6 h-6 text-divyam-orange" />
+                                <div className="w-12 h-12 bg-hope-purple/10 rounded-2xl flex items-center justify-center">
+                                    <Wallet className="w-6 h-6 text-hope-purple" />
                                 </div>
                                 <span className="flex items-center gap-1 text-[10px] font-black text-green-500 bg-green-50 px-2 py-1 rounded-lg uppercase tracking-widest">
                                     <ArrowUpRight className="w-3 h-3" /> 14% Inc
@@ -172,7 +172,7 @@ export default function AdminPayoutsPage() {
                                                 {pay.amount}
                                             </td>
                                             <td className="px-8 py-6 text-right">
-                                                <Button variant="ghost" className="text-xs font-black text-gray-400 hover:text-divyam-orange uppercase tracking-widest h-8 px-3 rounded-xl gap-2">
+                                                <Button variant="ghost" className="text-xs font-black text-gray-400 hover:text-hope-purple uppercase tracking-widest h-8 px-3 rounded-xl gap-2">
                                                     View Receipt <ArrowUpRight className="w-3 h-3" />
                                                 </Button>
                                             </td>

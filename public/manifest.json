@@ -1,7 +1,7 @@
 {
-    "name": "Divyam Partner Hub",
-    "short_name": "Divyam",
-    "description": "Hospitality Network Partner Program for commissions and referrals.",
+    "name": "HOPE Cafe",
+    "short_name": "HOPE Cafe",
+    "description": "Hospitality Network Partner Program for HOPE Cafe.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#FFFAF5",

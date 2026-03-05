@@ -82,9 +82,9 @@ export default function PartnerDashboard() {
     const metrics = [
         { label: "Total Generated Leads", value: stats.metrics.totalLeads.toString(), icon: TrendingUp, change: "Live", color: "text-blue-500", bg: "bg-blue-50" },
         { label: "Total Cafe Sales", value: `₹${stats.metrics.totalSales.toFixed(2)}`, icon: BarChart2, change: "All Time", color: "text-green-500", bg: "bg-green-50" },
-        { label: "Net Earned Commission", value: `₹${stats.metrics.totalCommission.toFixed(2)}`, icon: Wallet, change: `${stats.partnerDetails.slab}% Slab`, color: "text-divyam-orange", bg: "bg-divyam-orange/5" },
+        { label: "Net Earned Commission", value: `₹${stats.metrics.totalCommission.toFixed(2)}`, icon: Wallet, change: `${stats.partnerDetails.slab}% Slab`, color: "text-hope-purple", bg: "bg-hope-purple/5" },
         { label: "Total Paid", value: `₹${stats.metrics.totalPaid.toFixed(2)}`, icon: CheckCircle2, change: "Settled", color: "text-green-600", bg: "bg-green-100" },
-        { label: "Total Owed", value: `₹${stats.metrics.totalOwed.toFixed(2)}`, icon: Wallet, highlight: stats.metrics.totalOwed > 0, change: "Pending", color: "text-divyam-orange", bg: "bg-divyam-orange/10" },
+        { label: "Total Owed", value: `₹${stats.metrics.totalOwed.toFixed(2)}`, icon: Wallet, highlight: stats.metrics.totalOwed > 0, change: "Pending", color: "text-hope-purple", bg: "bg-hope-purple/10" },
     ];
 
     return (
@@ -121,7 +121,7 @@ export default function PartnerDashboard() {
                                     </div>
                                     <span className={cn(
                                         "text-[10px] font-black px-3 py-1.5 rounded-full shadow-sm uppercase tracking-widest",
-                                        idx === 2 ? 'bg-divyam-orange/10 text-divyam-orange' : 'bg-gray-100 text-gray-600'
+                                        idx === 2 ? 'bg-hope-purple/10 text-hope-purple' : 'bg-gray-100 text-gray-600'
                                     )}>
                                         {m.change}
                                     </span>
@@ -175,7 +175,7 @@ export default function PartnerDashboard() {
                                                     <td className="py-6">
                                                         <StatusBadge status={row.status} />
                                                     </td>
-                                                    <td className="py-6 text-lg font-black text-divyam-orange text-right">
+                                                    <td className="py-6 text-lg font-black text-hope-purple text-right">
                                                         <span className="group-hover:mr-2 transition-all">+₹{row.commission.toFixed(2)}</span>
                                                     </td>
                                                 </tr>
@@ -210,13 +210,13 @@ export default function PartnerDashboard() {
                         </CardContent>
                     </Card>
 
-                    <Card className="bg-divyam-orange text-white border-none shadow-xl shadow-divyam-orange/20 overflow-hidden relative shrink-0">
+                    <Card className="bg-hope-purple text-white border-none shadow-xl shadow-hope-purple/20 overflow-hidden relative shrink-0">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -z-0" />
                         <CardHeader className="relative z-10">
                             <CardTitle className="text-white text-center">Your Live Standee</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center relative z-10 pb-14">
-                            <div className="bg-white p-7 rounded-[2.5rem] inline-block mb-6 shadow-2xl shadow-orange-900/20 group-hover:scale-105 transition-transform duration-500">
+                            <div className="bg-white p-7 rounded-[2.5rem] inline-block mb-6 shadow-2xl shadow-purple-950/20 group-hover:scale-105 transition-transform duration-500">
                                 <Link target="_blank" href={`/p/${stats.partnerDetails.code}`}>
                                     <div className="w-32 h-32 bg-white flex items-center justify-center cursor-pointer">
                                         <QRCode

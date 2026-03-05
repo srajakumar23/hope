@@ -73,12 +73,12 @@ export default function AddPartnerPage() {
                     <span className="font-bold text-gray-900">{formData.hotelName}</span> is now live on the network at the {formData.commissionSlab}% slab.
                 </p>
 
-                <div className="bg-divyam-orange/5 border border-divyam-orange/20 p-6 rounded-2xl w-full max-w-md mb-8">
-                    <h3 className="text-sm font-bold text-divyam-orange uppercase tracking-widest mb-4">Print QR Standee</h3>
+                <div className="bg-hope-purple/5 border border-hope-purple/20 p-6 rounded-2xl w-full max-w-md mb-8">
+                    <h3 className="text-sm font-bold text-hope-purple uppercase tracking-widest mb-4">Print QR Standee</h3>
                     <p className="text-xs text-gray-600 mb-5">Scan or hand this QR to the receptionist — guests scan it at the hotel to get their Live Pass.</p>
 
                     {/* QR Code */}
-                    <div className="bg-white p-5 rounded-xl border border-orange-100 flex justify-center mb-4 shadow-sm">
+                    <div className="bg-white p-5 rounded-xl border border-purple-100 flex justify-center mb-4 shadow-sm">
                         <QRCode
                             value={passUrl}
                             size={180}
@@ -104,9 +104,9 @@ export default function AddPartnerPage() {
     return (
         <div className="max-w-3xl mx-auto p-6 md:p-10">
             <div className="mb-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-divyam-orange/10 border border-divyam-orange/20 rounded-full mb-4">
-                    <UserCheck className="w-4 h-4 text-divyam-orange" />
-                    <span className="text-xs font-bold text-divyam-orange uppercase tracking-widest">Marketing Portal</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-hope-purple/10 border border-hope-purple/20 rounded-full mb-4">
+                    <UserCheck className="w-4 h-4 text-hope-purple" />
+                    <span className="text-xs font-bold text-hope-purple uppercase tracking-widest">Marketing Portal</span>
                 </div>
                 <h1 className="text-3xl font-black text-gray-900 tracking-tight">Onboard New Partner</h1>
                 <p className="text-gray-500 font-medium mt-2">Instantly activate a hotel or tour guide and issue their QR Standee link.</p>
@@ -116,10 +116,10 @@ export default function AddPartnerPage() {
             <div className="flex items-center gap-2 mb-8">
                 {[1, 2, 3].map((num) => (
                     <React.Fragment key={num}>
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${step >= num ? 'bg-divyam-orange text-white shadow-md' : 'bg-gray-100 text-gray-400'}`}>
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${step >= num ? 'bg-hope-purple text-white shadow-md' : 'bg-gray-100 text-gray-400'}`}>
                             {num}
                         </div>
-                        {num < 3 && <div className={`h-1 flex-1 rounded-full transition-colors ${step > num ? 'bg-divyam-orange' : 'bg-gray-100'}`} />}
+                        {num < 3 && <div className={`h-1 flex-1 rounded-full transition-colors ${step > num ? 'bg-hope-purple' : 'bg-gray-100'}`} />}
                     </React.Fragment>
                 ))}
             </div>
@@ -135,7 +135,7 @@ export default function AddPartnerPage() {
                             className="space-y-6"
                         >
                             <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                <Building className="w-5 h-5 text-divyam-orange" /> Basic Details
+                                <Building className="w-5 h-5 text-hope-purple" /> Basic Details
                             </h3>
 
                             <div className="space-y-4">
@@ -146,7 +146,7 @@ export default function AddPartnerPage() {
                                         name="hotelName"
                                         value={formData.hotelName}
                                         onChange={handleChange}
-                                        className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-divyam-orange"
+                                        className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-hope-purple"
                                         placeholder="e.g. Grand Hotel & Suites"
                                         required
                                     />
@@ -160,7 +160,7 @@ export default function AddPartnerPage() {
                                             name="contactName"
                                             value={formData.contactName}
                                             onChange={handleChange}
-                                            className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-divyam-orange"
+                                            className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-hope-purple"
                                             placeholder="Jane Doe"
                                             required
                                         />
@@ -178,7 +178,7 @@ export default function AddPartnerPage() {
                                                 name="mobile"
                                                 value={formData.mobile}
                                                 onChange={(e) => setFormData({ ...formData, mobile: e.target.value.replace(/\D/g, '') })}
-                                                className="block w-full pl-20 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-divyam-orange"
+                                                className="block w-full pl-20 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-hope-purple"
                                                 placeholder="99999 99999"
                                                 required
                                             />
@@ -188,7 +188,7 @@ export default function AddPartnerPage() {
                             </div>
 
                             <div className="pt-6 flex justify-end">
-                                <Button onClick={nextStep} className="h-12 px-8 bg-divyam-orange hover:bg-orange-600 text-white" disabled={!formData.hotelName || !formData.contactName || formData.mobile.length !== 10}>
+                                <Button onClick={nextStep} className="h-12 px-8 bg-hope-purple hover:bg-purple-700 text-white" disabled={!formData.hotelName || !formData.contactName || formData.mobile.length !== 10}>
                                     Next Step <ChevronRight className="w-4 h-4 ml-1" />
                                 </Button>
                             </div>
@@ -204,7 +204,7 @@ export default function AddPartnerPage() {
                             className="space-y-6"
                         >
                             <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                <Receipt className="w-5 h-5 text-divyam-orange" /> Payout Details
+                                <Receipt className="w-5 h-5 text-hope-purple" /> Payout Details
                             </h3>
 
                             <div className="space-y-4">
@@ -215,7 +215,7 @@ export default function AddPartnerPage() {
                                         name="bankAccount"
                                         value={formData.bankAccount}
                                         onChange={handleChange}
-                                        className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-divyam-orange font-mono tracking-widest"
+                                        className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-hope-purple font-mono tracking-widest"
                                         placeholder="••••••••••••"
                                         required
                                     />
@@ -228,7 +228,7 @@ export default function AddPartnerPage() {
                                         name="ifsc"
                                         value={formData.ifsc}
                                         onChange={(e) => setFormData({ ...formData, ifsc: e.target.value.toUpperCase() })}
-                                        className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-divyam-orange font-mono uppercase"
+                                        className="block w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl font-medium focus:ring-2 focus:ring-hope-purple font-mono uppercase"
                                         placeholder="HDFC0001234"
                                         maxLength={11}
                                         required
@@ -240,7 +240,7 @@ export default function AddPartnerPage() {
                                 <Button onClick={() => setStep(1)} variant="outline" className="h-12 px-8 text-gray-500 hover:text-gray-900 border-gray-200">
                                     Back
                                 </Button>
-                                <Button onClick={nextStep} className="h-12 px-8 bg-divyam-orange hover:bg-orange-600 text-white" disabled={!formData.bankAccount || formData.ifsc.length < 5}>
+                                <Button onClick={nextStep} className="h-12 px-8 bg-hope-purple hover:bg-purple-700 text-white" disabled={!formData.bankAccount || formData.ifsc.length < 5}>
                                     Next Step <ChevronRight className="w-4 h-4 ml-1" />
                                 </Button>
                             </div>
@@ -256,28 +256,28 @@ export default function AddPartnerPage() {
                             className="space-y-6"
                         >
                             <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                <Percent className="w-5 h-5 text-divyam-orange" /> Agreement & Activation
+                                <Percent className="w-5 h-5 text-hope-purple" /> Agreement & Activation
                             </h3>
 
                             <div className="grid grid-cols-2 gap-4 mb-6">
                                 <div
                                     onClick={() => setFormData({ ...formData, commissionSlab: "7.5" })}
-                                    className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${formData.commissionSlab === "7.5" ? 'border-divyam-orange bg-orange-50' : 'border-gray-100 bg-gray-50 hover:bg-gray-100'}`}
+                                    className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${formData.commissionSlab === "7.5" ? 'border-hope-purple bg-purple-50' : 'border-gray-100 bg-gray-50 hover:bg-gray-100'}`}
                                 >
                                     <div className="flex justify-between items-start mb-2">
                                         <span className="text-xs font-bold uppercase tracking-widest text-gray-500">Standard</span>
-                                        {formData.commissionSlab === "7.5" && <CheckCircle2 className="w-4 h-4 text-divyam-orange" />}
+                                        {formData.commissionSlab === "7.5" && <CheckCircle2 className="w-4 h-4 text-hope-purple" />}
                                     </div>
                                     <span className="text-3xl font-black text-gray-900">7.5%</span>
                                 </div>
 
                                 <div
                                     onClick={() => setFormData({ ...formData, commissionSlab: "10.0" })}
-                                    className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${formData.commissionSlab === "10.0" ? 'border-divyam-orange bg-orange-50' : 'border-gray-100 bg-gray-50 hover:bg-gray-100'}`}
+                                    className={`p-4 rounded-xl border-2 cursor-pointer transition-all ${formData.commissionSlab === "10.0" ? 'border-hope-purple bg-purple-50' : 'border-gray-100 bg-gray-50 hover:bg-gray-100'}`}
                                 >
                                     <div className="flex justify-between items-start mb-2">
-                                        <span className="text-xs font-bold uppercase tracking-widest text-divyam-orange">Premium</span>
-                                        {formData.commissionSlab === "10.0" && <CheckCircle2 className="w-4 h-4 text-divyam-orange" />}
+                                        <span className="text-xs font-bold uppercase tracking-widest text-hope-purple">Premium</span>
+                                        {formData.commissionSlab === "10.0" && <CheckCircle2 className="w-4 h-4 text-hope-purple" />}
                                     </div>
                                     <span className="text-3xl font-black text-gray-900">10%</span>
                                 </div>
@@ -288,7 +288,7 @@ export default function AddPartnerPage() {
                                 <div className="space-y-2 text-sm font-medium">
                                     <div className="flex justify-between"><span className="text-gray-400">Partner:</span> <span>{formData.hotelName}</span></div>
                                     <div className="flex justify-between"><span className="text-gray-400">Contact:</span> <span>+91 {formData.mobile}</span></div>
-                                    <div className="flex justify-between"><span className="text-gray-400">Commission Rate:</span> <span className="text-divyam-orange font-bold">{formData.commissionSlab}%</span></div>
+                                    <div className="flex justify-between"><span className="text-gray-400">Commission Rate:</span> <span className="text-hope-purple font-bold">{formData.commissionSlab}%</span></div>
                                 </div>
                             </div>
 

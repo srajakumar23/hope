@@ -71,7 +71,7 @@ export default function PartnerLayout({ children }: { children: React.ReactNode 
                 <aside className="w-64 bg-white border-r border-gray-100 hidden lg:flex flex-col fixed h-screen z-40">
                     <div className="p-6">
                         <Link href="/" className="flex items-center gap-2">
-                            <div className="w-10 h-10 bg-divyam-orange rounded-xl flex items-center justify-center shadow-lg shadow-divyam-orange/10">
+                            <div className="w-10 h-10 bg-hope-purple rounded-xl flex items-center justify-center shadow-lg shadow-hope-purple/10">
                                 <span className="text-white text-2xl font-bold">✧</span>
                             </div>
                             <span className="font-bold text-xl text-gray-900 tracking-tight">Divyam</span>
@@ -87,8 +87,8 @@ export default function PartnerLayout({ children }: { children: React.ReactNode 
                                 className={cn(
                                     "flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-bold transition-all group",
                                     pathname === link.href
-                                        ? "bg-divyam-orange/5 text-divyam-orange"
-                                        : "text-gray-500 hover:text-divyam-orange hover:bg-divyam-orange/5"
+                                        ? "bg-hope-purple/5 text-hope-purple"
+                                        : "text-gray-500 hover:text-hope-purple hover:bg-hope-purple/5"
                                 )}
                             >
                                 <div className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export default function PartnerLayout({ children }: { children: React.ReactNode 
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-bold text-gray-500 hover:text-divyam-orange hover:bg-divyam-orange/5 transition-all group"
+                                className="flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-bold text-gray-500 hover:text-hope-purple hover:bg-hope-purple/5 transition-all group"
                             >
                                 <div className="flex items-center gap-3">
                                     <link.icon className="w-5 h-5 shrink-0" />

@@ -66,7 +66,7 @@ export default function ReferralsPage() {
                 {[
                     { label: "Total Referrals", value: "1,248", icon: Users, color: "text-blue-500", bg: "bg-blue-50" },
                     { label: "Confirmed", value: "982", icon: CheckCircle2, color: "text-green-500", bg: "bg-green-50" },
-                    { label: "Pending Review", value: "266", icon: Clock, color: "text-divyam-orange", bg: "bg-divyam-orange/5" },
+                    { label: "Pending Review", value: "266", icon: Clock, color: "text-hope-purple", bg: "bg-hope-purple/5" },
                 ].map((stat, idx) => (
                     <motion.div key={idx} variants={item}>
                         <Card className="border-none bg-white shadow-xl shadow-gray-200/50">
@@ -118,7 +118,7 @@ export default function ReferralsPage() {
                                         <tr key={i} className="group hover:bg-gray-50/50 transition-all cursor-pointer">
                                             <td className="px-8 py-6">
                                                 <div className="flex items-center gap-3">
-                                                    <div className="w-10 h-10 bg-divyam-orange/10 rounded-full flex items-center justify-center font-bold text-divyam-orange">
+                                                    <div className="w-10 h-10 bg-hope-purple/10 rounded-full flex items-center justify-center font-bold text-hope-purple">
                                                         {row.name[0]}
                                                     </div>
                                                     <div>
@@ -131,7 +131,7 @@ export default function ReferralsPage() {
                                                 <span className={cn(
                                                     "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest",
                                                     row.status === "Confirmed" ? "bg-green-100 text-green-700" :
-                                                        row.status === "Pending" ? "bg-divyam-orange/10 text-divyam-orange" :
+                                                        row.status === "Pending" ? "bg-hope-purple/10 text-hope-purple" :
                                                             "bg-red-100 text-red-700"
                                                 )}>
                                                     {row.status === "Confirmed" && <CheckCircle2 className="w-3 h-3" />}
@@ -141,7 +141,7 @@ export default function ReferralsPage() {
                                                 </span>
                                             </td>
                                             <td className="px-8 py-6 text-right font-bold text-gray-600">{row.bill}</td>
-                                            <td className="px-8 py-6 text-right font-black text-divyam-orange text-lg">
+                                            <td className="px-8 py-6 text-right font-black text-hope-purple text-lg">
                                                 {row.comm}
                                             </td>
                                         </tr>

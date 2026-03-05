@@ -37,7 +37,7 @@ export default function PartnerSettingsPage() {
     const [activeTab, setActiveTab] = React.useState("Account Info");
 
     React.useEffect(() => {
-        const sessionRaw = localStorage.getItem("divyam_partner_session");
+        const sessionRaw = localStorage.getItem("hope_partner_session");
         if (sessionRaw) {
             const session = JSON.parse(sessionRaw);
             // In a real app, we'd fetch full details from API. For now, we'll use session + a mock fetch simulation
@@ -81,7 +81,7 @@ export default function PartnerSettingsPage() {
                 <motion.div variants={item} className="space-y-6">
                     <Card className="border-none bg-white shadow-xl shadow-gray-200/50 overflow-hidden">
                         <CardContent className="p-0">
-                            <div className="h-24 bg-gradient-to-r from-divyam-orange to-orange-400" />
+                            <div className="h-24 bg-gradient-to-r from-hope-purple to-hope-purple" />
                             <div className="p-8 -mt-16 text-center">
                                 <div className="relative inline-block group">
                                     <div className="w-32 h-32 rounded-3xl bg-white p-1 shadow-2xl relative z-10">
@@ -111,7 +111,7 @@ export default function PartnerSettingsPage() {
                                     onClick={() => setActiveTab(tab.label)}
                                     className={cn(
                                         "w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl text-sm font-bold transition-all",
-                                        activeTab === tab.label ? "bg-divyam-orange/10 text-divyam-orange" : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
+                                        activeTab === tab.label ? "bg-hope-purple/10 text-hope-purple" : "text-gray-500 hover:bg-gray-50 hover:text-gray-900"
                                     )}
                                 >
                                     <tab.icon className="w-5 h-5" />
@@ -265,7 +265,7 @@ export default function PartnerSettingsPage() {
                                             <p className="text-sm font-bold text-gray-900">{notif.title}</p>
                                             <p className="text-xs text-gray-500">{notif.desc}</p>
                                         </div>
-                                        <div className="w-12 h-6 bg-divyam-orange rounded-full relative cursor-pointer">
+                                        <div className="w-12 h-6 bg-hope-purple rounded-full relative cursor-pointer">
                                             <div className="absolute right-1 top-1 w-4 h-4 bg-white rounded-full transition-all" />
                                         </div>
                                     </div>

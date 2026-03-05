@@ -42,12 +42,12 @@ export default function ScanPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50/30 flex flex-col items-center justify-center px-4 py-16">
+        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-50/30 flex flex-col items-center justify-center px-4 py-16">
             {/* Back link */}
             <div className="w-full max-w-md mb-6">
                 <Link
                     href="/"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-divyam-orange transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-hope-purple transition-colors"
                 >
                     <ArrowLeft className="w-4 h-4" /> Back to Home
                 </Link>
@@ -61,13 +61,13 @@ export default function ScanPage() {
                 className="w-full max-w-md bg-white rounded-[2rem] shadow-2xl shadow-black/5 border border-gray-100 overflow-hidden"
             >
                 {/* Header */}
-                <div className="bg-gradient-to-br from-divyam-orange to-orange-500 p-8 text-center relative overflow-hidden">
+                <div className="bg-gradient-to-br from-hope-purple to-hope-pink p-8 text-center relative overflow-hidden">
                     <div className="absolute -top-8 -right-8 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
                     <div className="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                         <QrCode className="w-8 h-8 text-white" />
                     </div>
                     <h1 className="text-2xl font-black text-white tracking-tight">Find Your Live Pass</h1>
-                    <p className="text-orange-100 text-sm font-medium mt-1">
+                    <p className="text-purple-100 text-sm font-medium mt-1">
                         Enter the mobile number you registered with
                     </p>
                 </div>
@@ -103,7 +103,7 @@ export default function ScanPage() {
                                                 setError(null);
                                                 setMobile(e.target.value.replace(/\D/g, "").slice(0, 10));
                                             }}
-                                            className="w-full pl-12 pr-4 py-4 rounded-2xl border-2 border-gray-100 bg-gray-50 focus:bg-white focus:border-divyam-orange focus:outline-none font-bold text-gray-900 text-lg transition-all"
+                                            className="w-full pl-12 pr-4 py-4 rounded-2xl border-2 border-gray-100 bg-gray-50 focus:bg-white focus:border-hope-purple focus:outline-none font-bold text-gray-900 text-lg transition-all"
                                         />
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@ export default function ScanPage() {
                                 <button
                                     type="submit"
                                     disabled={loading || mobile.length < 10}
-                                    className="w-full h-14 bg-gradient-to-r from-divyam-orange to-orange-500 hover:from-orange-500 hover:to-divyam-orange text-white font-black text-lg rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-divyam-orange/30 hover:shadow-xl hover:shadow-divyam-orange/40 transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                                    className="w-full h-14 bg-gradient-to-r from-hope-purple to-hope-pink hover:from-hope-pink hover:to-hope-purple text-white font-black text-lg rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-hope-purple/30 hover:shadow-xl hover:shadow-hope-purple/40 transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                                 >
                                     {loading ? (
                                         <><Loader2 className="w-5 h-5 animate-spin" /> Looking up…</>
@@ -159,7 +159,7 @@ export default function ScanPage() {
 
                                 <button
                                     onClick={handleGoToPass}
-                                    className="w-full h-14 bg-gradient-to-r from-divyam-orange to-orange-500 hover:from-orange-500 hover:to-divyam-orange text-white font-black text-lg rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-divyam-orange/30 transition-all hover:-translate-y-0.5"
+                                    className="w-full h-14 bg-gradient-to-r from-hope-purple to-hope-pink hover:from-hope-pink hover:to-hope-purple text-white font-black text-lg rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-hope-purple/30 transition-all hover:-translate-y-0.5"
                                 >
                                     <QrCode className="w-5 h-5" /> Open My Live Pass
                                 </button>
@@ -178,7 +178,7 @@ export default function ScanPage() {
 
             {/* Info strip */}
             <p className="mt-8 text-xs text-gray-400 font-medium text-center max-w-xs">
-                Your Live Pass contains a secure QR code accepted at Divyam Café for your guest discount.
+                Your Live Pass contains a secure QR code accepted at HOPE Cafe for your guest discount.
             </p>
         </div>
     );

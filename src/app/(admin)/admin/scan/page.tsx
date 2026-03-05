@@ -146,7 +146,7 @@ export default function CashierScanPage() {
                 <div className="lg:col-span-1 bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col h-[600px]">
                     <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-2">
-                            <Clock className="w-5 h-5 text-divyam-orange" />
+                            <Clock className="w-5 h-5 text-hope-purple" />
                             <h3 className="text-lg font-bold text-gray-900">Incoming Setup</h3>
                         </div>
                         <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse" />
@@ -165,7 +165,7 @@ export default function CashierScanPage() {
                                         <h4 className="font-bold text-gray-900">{guest.name}</h4>
                                         <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{guest.timeAgo}</span>
                                     </div>
-                                    <p className="text-xs text-divyam-orange font-bold uppercase tracking-widest mb-2">{guest.partnerName}</p>
+                                    <p className="text-xs text-hope-purple font-bold uppercase tracking-widest mb-2">{guest.partnerName}</p>
                                     <p className="text-xs text-gray-500 font-medium tracking-widest">+91 {guest.mobile.slice(0, 5)} {guest.mobile.slice(5)}</p>
                                 </div>
                             ))
@@ -222,17 +222,17 @@ export default function CashierScanPage() {
 
                                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
                                         <div className="w-48 h-48 border-2 border-white/20 rounded-xl relative">
-                                            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-divyam-orange rounded-tl-xl" />
-                                            <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-divyam-orange rounded-tr-xl" />
-                                            <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-divyam-orange rounded-bl-xl" />
-                                            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-divyam-orange rounded-br-xl" />
+                                            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-hope-purple rounded-tl-xl" />
+                                            <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-hope-purple rounded-tr-xl" />
+                                            <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-hope-purple rounded-bl-xl" />
+                                            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-hope-purple rounded-br-xl" />
                                         </div>
                                     </div>
 
                                     <motion.div
                                         animate={{ y: [-96, 96, -96] }}
                                         transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-                                        className="absolute w-48 h-0.5 bg-divyam-orange shadow-[0_0_12px_rgba(255,122,26,1)] z-20 pointer-events-none"
+                                        className="absolute w-48 h-0.5 bg-hope-purple shadow-[0_0_12px_rgba(255,122,26,1)] z-20 pointer-events-none"
                                     />
 
                                     <p className="absolute bottom-4 text-xs font-bold text-white tracking-widest uppercase z-20 drop-shadow-md bg-black/50 px-3 py-1 rounded-full">Looking for QR Code...</p>
@@ -265,7 +265,7 @@ export default function CashierScanPage() {
                                     Guest: <span className="font-bold text-gray-900">{scannedGuest?.name}</span>
                                 </p>
                                 <p className="text-gray-500 font-medium">
-                                    Partner: <span className="text-divyam-orange font-bold uppercase tracking-widest text-xs">{scannedGuest?.partnerName}</span>
+                                    Partner: <span className="text-hope-purple font-bold uppercase tracking-widest text-xs">{scannedGuest?.partnerName}</span>
                                 </p>
 
                                 {(scanStatus === "success" || scanStatus === "settled") && (
@@ -314,7 +314,7 @@ export default function CashierScanPage() {
                                         maxLength={10}
                                         value={mobileVerify}
                                         onChange={(e) => setMobileVerify(e.target.value.replace(/\D/g, ''))}
-                                        className="block w-full px-4 py-4 bg-white border border-gray-200 rounded-2xl text-xl font-black tracking-widest text-gray-900 focus:ring-2 focus:ring-divyam-orange focus:border-divyam-orange transition-all placeholder:text-gray-300 placeholder:font-normal text-center shadow-sm"
+                                        className="block w-full px-4 py-4 bg-white border border-gray-200 rounded-2xl text-xl font-black tracking-widest text-gray-900 focus:ring-2 focus:ring-hope-purple focus:border-hope-purple transition-all placeholder:text-gray-300 placeholder:font-normal text-center shadow-sm"
                                         placeholder="• • • • • • • • • •"
                                         required
                                     />
@@ -354,7 +354,7 @@ export default function CashierScanPage() {
                                                     type="number"
                                                     value={billAmount}
                                                     onChange={(e) => setBillAmount(e.target.value)}
-                                                    className="block w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-lg font-bold text-gray-900 focus:ring-2 focus:ring-divyam-orange"
+                                                    className="block w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-lg font-bold text-gray-900 focus:ring-2 focus:ring-hope-purple"
                                                     placeholder="0.00"
                                                 />
                                             </div>
@@ -372,7 +372,7 @@ export default function CashierScanPage() {
                                                 </div>
                                                 <div className="flex justify-between text-gray-400 text-xs mt-2">
                                                     <span>Partner Commission ({scannedGuest.commissionSlab}%)</span>
-                                                    <span className="text-divyam-orange">₹{(Number(billAmount) * (1 - scannedGuest.commissionSlab / 100) * (scannedGuest.commissionSlab / 100)).toFixed(2)}</span>
+                                                    <span className="text-hope-purple">₹{(Number(billAmount) * (1 - scannedGuest.commissionSlab / 100) * (scannedGuest.commissionSlab / 100)).toFixed(2)}</span>
                                                 </div>
                                             </div>
                                         )}

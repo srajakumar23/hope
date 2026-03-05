@@ -189,7 +189,7 @@ export default function AdminPartnersPage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {[
                     { label: "Active Partners", value: partners.length.toString(), icon: Users, color: "text-blue-500", bg: "bg-blue-50" },
-                    { label: "Audit Requests", value: "0", icon: ShieldCheck, color: "text-divyam-orange", bg: "bg-divyam-orange/10" },
+                    { label: "Audit Requests", value: "0", icon: ShieldCheck, color: "text-hope-purple", bg: "bg-hope-purple/10" },
                     { label: "Avg Commission", value: partners.length > 0 ? `${(partners.reduce((acc, p) => acc + p.commissionSlab, 0) / partners.length).toFixed(1)}%` : "0%", icon: Percent, color: "text-green-500", bg: "bg-green-50" },
                     { label: "Total Partners", value: partners.length.toString(), icon: Users, color: "text-purple-500", bg: "bg-purple-50" },
                 ].map((stat, idx) => (
@@ -216,7 +216,7 @@ export default function AdminPartnersPage() {
                                 <Input
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="pl-14 h-14 bg-white border-transparent focus:border-divyam-orange rounded-2xl shadow-sm text-sm"
+                                    className="pl-14 h-14 bg-white border-transparent focus:border-hope-purple rounded-2xl shadow-sm text-sm"
                                     placeholder="Search partners by name, ID or location..."
                                 />
                             </div>
@@ -291,7 +291,7 @@ export default function AdminPartnersPage() {
                                                     >
                                                         <MinusCircle className="w-5 h-5" />
                                                     </button>
-                                                    <div className="w-16 text-center font-black text-divyam-orange text-sm bg-divyam-orange/5 py-2 rounded-xl border border-divyam-orange/10">
+                                                    <div className="w-16 text-center font-black text-hope-purple text-sm bg-hope-purple/5 py-2 rounded-xl border border-hope-purple/10">
                                                         {p.guestDiscountSlab || p.commissionSlab}%
                                                     </div>
                                                     <button
@@ -359,7 +359,7 @@ export default function AdminPartnersPage() {
                                 <Input
                                     required
                                     placeholder="e.g. Sea Side Hotel & Resorts"
-                                    className="h-14 rounded-2xl border-gray-100 focus:border-divyam-orange"
+                                    className="h-14 rounded-2xl border-gray-100 focus:border-hope-purple"
                                     value={newPartner.hotelName}
                                     onChange={(e) => setNewPartner({ ...newPartner, hotelName: e.target.value })}
                                 />
@@ -369,7 +369,7 @@ export default function AdminPartnersPage() {
                                 <Input
                                     required
                                     placeholder="Name of the manager/owner"
-                                    className="h-14 rounded-2xl border-gray-100 focus:border-divyam-orange"
+                                    className="h-14 rounded-2xl border-gray-100 focus:border-hope-purple"
                                     value={newPartner.contactName}
                                     onChange={(e) => setNewPartner({ ...newPartner, contactName: e.target.value })}
                                 />
@@ -380,7 +380,7 @@ export default function AdminPartnersPage() {
                                     <Input
                                         required
                                         placeholder="98765 43210"
-                                        className="h-14 rounded-2xl border-gray-100 focus:border-divyam-orange"
+                                        className="h-14 rounded-2xl border-gray-100 focus:border-hope-purple"
                                         value={newPartner.mobile}
                                         onChange={(e) => setNewPartner({ ...newPartner, mobile: e.target.value })}
                                     />
@@ -389,7 +389,7 @@ export default function AdminPartnersPage() {
                                     <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Email Address</label>
                                     <Input
                                         placeholder="Optional"
-                                        className="h-14 rounded-2xl border-gray-100 focus:border-divyam-orange"
+                                        className="h-14 rounded-2xl border-gray-100 focus:border-hope-purple"
                                         value={newPartner.email}
                                         onChange={(e) => setNewPartner({ ...newPartner, email: e.target.value })}
                                     />
@@ -403,7 +403,7 @@ export default function AdminPartnersPage() {
                                         min="1"
                                         max="40"
                                         step="0.5"
-                                        className="h-14 rounded-2xl border-gray-100 focus:border-divyam-orange font-bold text-center"
+                                        className="h-14 rounded-2xl border-gray-100 focus:border-hope-purple font-bold text-center"
                                         value={newPartner.commissionSlab}
                                         onChange={(e) => setNewPartner({ ...newPartner, commissionSlab: parseFloat(e.target.value) })}
                                     />
@@ -413,7 +413,7 @@ export default function AdminPartnersPage() {
 
                             <Button
                                 type="submit"
-                                className="w-full h-16 text-sm font-black uppercase tracking-widest rounded-3xl mt-6 shadow-2xl shadow-divyam-orange/30"
+                                className="w-full h-16 text-sm font-black uppercase tracking-widest rounded-3xl mt-6 shadow-2xl shadow-hope-purple/30"
                                 isLoading={isSubmitting}
                             >
                                 Process Registration

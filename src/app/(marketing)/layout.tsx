@@ -30,7 +30,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
             return;
         }
 
-        const session = localStorage.getItem("divyam_marketing_session");
+        const session = localStorage.getItem("hopecafe_marketing_session");
         if (!session) {
             toast.error("Security session expired. Please log in.");
             router.replace("/marketing/login");
@@ -40,7 +40,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
     }, [pathname, router]);
 
     const handleLogout = () => {
-        localStorage.removeItem("divyam_marketing_session");
+        localStorage.removeItem("hopecafe_marketing_session");
         toast.info("Logged out successfully.");
         router.replace("/marketing/login");
     };
@@ -56,12 +56,12 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
                 <aside className="w-72 bg-white border-r border-gray-100 hidden lg:flex flex-col fixed h-screen z-40 shadow-xl shadow-gray-200/50">
                     <div className="p-8">
                         <Link href="/" className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-divyam-orange rounded-xl flex items-center justify-center shadow-lg shadow-divyam-orange/20">
+                            <div className="w-10 h-10 bg-hope-purple rounded-xl flex items-center justify-center shadow-lg shadow-hope-purple/20">
                                 <Briefcase className="text-white w-6 h-6" />
                             </div>
                             <div>
                                 <span className="font-bold text-lg text-gray-900 block leading-none tracking-tight">Marketing</span>
-                                <span className="text-[10px] text-gray-500 uppercase tracking-[0.15em] font-black">Divyam Network</span>
+                                <span className="text-[10px] text-gray-500 uppercase tracking-[0.15em] font-black">HOPE Cafe Network</span>
                             </div>
                         </Link>
                     </div>
@@ -74,8 +74,8 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
                                 className={cn(
                                     "flex items-center justify-between px-4 py-3.5 rounded-2xl text-sm font-bold transition-all group",
                                     pathname === link.href
-                                        ? "bg-divyam-orange/10 text-divyam-orange"
-                                        : "text-gray-600 hover:text-divyam-orange hover:bg-divyam-orange/5"
+                                        ? "bg-hope-purple/10 text-hope-purple"
+                                        : "text-gray-600 hover:text-hope-purple hover:bg-hope-purple/5"
                                 )}
                             >
                                 <div className="flex items-center gap-3">
