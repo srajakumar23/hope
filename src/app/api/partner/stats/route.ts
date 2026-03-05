@@ -28,7 +28,7 @@ export async function GET(req: Request) {
             partner = await prisma.partner.create({
                 data: {
                     partnerCode: "demo",
-                    name: "Grand Hotel & Suites (Demo)",
+                    name: "Grand Hope Cafe (Demo)",
                     email: "demo@partner.hub",
                     mobile: "0000000000",
                     commissionSlab: 7.5

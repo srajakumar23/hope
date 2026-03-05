@@ -60,7 +60,7 @@ export default function PassDisplayPage({ params }: { params: Promise<{ guestId:
     }, [guestData, unwrappedParams.guestId]);
 
     if (loading) {
-        return <div className="min-h-screen bg-gray-900 flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-hope-orange border-t-transparent animate-spin" /></div>;
+        return <div className="min-h-screen bg-gray-900 flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-hope-purple border-t-transparent animate-spin" /></div>;
     }
 
     if (error || !guestData) {
@@ -127,7 +127,7 @@ export default function PassDisplayPage({ params }: { params: Promise<{ guestId:
                         </div>
 
                         <div className="w-full px-8 text-center relative z-10">
-                            <div className="flex items-center justify-center gap-2 text-hope-orange mb-3">
+                            <div className="flex items-center justify-center gap-2 text-hope-purple mb-3">
                                 <Timer className="w-4 h-4 animate-pulse" />
                                 <span className="font-bold text-sm tracking-wide">Refreshes in {timeLeft}s</span>
                             </div>

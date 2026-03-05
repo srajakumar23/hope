@@ -42,6 +42,7 @@ export default function FAQ() {
                         <button
                             onClick={() => setOpenIndex(isOpen ? null : idx)}
                             className="w-full px-8 py-6 flex items-center justify-between text-left"
+                            suppressHydrationWarning
                         >
                             <span className={cn(
                                 "font-bold text-lg transition-colors",

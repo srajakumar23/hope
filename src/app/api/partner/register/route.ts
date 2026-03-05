@@ -7,16 +7,16 @@ export const runtime = 'nodejs';
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { hotelName, contactName, mobile, email, commissionSlab } = body;
+        const { partnerName, contactName, mobile, email, commissionSlab } = body;
 
-        if (!hotelName || !contactName || !mobile) {
+        if (!partnerName || !contactName || !mobile) {
             return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
         }
 
         const prisma = getPrisma();
 
-        // Generate a unique partner code from hotel name
-        const slug = hotelName
+        // Generate a unique partner code from partner name
+        const slug = partnerName
             .toUpperCase()
             .replace(/[^A-Z0-9\s]/g, "")
             .split(" ")
@@ -34,7 +34,7 @@ export async function POST(req: Request) {
         const newPartner = await prisma.partner.create({
             data: {
                 id: `p_${Date.now()}`,
-                name: hotelName,
+                name: partnerName,
                 contactName,
                 mobile,
                 email: email || null,

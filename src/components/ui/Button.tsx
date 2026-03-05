@@ -32,6 +32,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
+                suppressHydrationWarning
                 className={cn(
                     "inline-flex items-center justify-center rounded-2xl font-bold transition-all disabled:opacity-50 disabled:pointer-events-none relative overflow-hidden gap-2.5",
                     variants[variant],

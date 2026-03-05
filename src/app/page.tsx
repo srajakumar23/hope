@@ -13,12 +13,12 @@ import {
   Zap,
   Waves,
   Compass,
-  Hotel,
   Coffee,
   UserPlus,
   ShieldCheck,
   QrCode,
-  Banknote
+  Banknote,
+  Building2
 } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
@@ -173,7 +173,7 @@ export default function Home() {
             className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto"
           >
             {[
-              { icon: "🏨", label: "Hotels & Villas", desc: "Refer hotel guests" },
+              { icon: "🤝", label: "Partner Network", desc: "Refer guests & earn" },
               { icon: "🏡", label: "Homestays & Guest Houses", desc: "Small-stay referrals" },
               { icon: "🏝️", label: "Resorts & Boutique Stays", desc: "Premium guest base" },
               { icon: "🛏️", label: "Hostels & Backpacker Lodges", desc: "High tourist volume" },
@@ -400,7 +400,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-purple-200 text-xs font-bold tracking-[0.2em] uppercase">
+            <p className="text-purple-200 text-xs font-bold tracking-[0.2em] uppercase" suppressHydrationWarning>
               &copy; {new Date().getFullYear()} HOPE Cafe.
             </p>
             <div className="flex items-center gap-6">

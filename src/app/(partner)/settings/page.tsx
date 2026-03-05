@@ -42,7 +42,7 @@ export default function PartnerSettingsPage() {
             const session = JSON.parse(sessionRaw);
             // In a real app, we'd fetch full details from API. For now, we'll use session + a mock fetch simulation
             setPartner({
-                name: session.name || "Grand Hotel & Suites",
+                name: session.name || "Grand Hope Cafe",
                 email: session.email || "demo@partner.hub",
                 mobile: session.mobile || "+91 00000 00000",
                 partnerCode: session.partnerCode || "demo",
@@ -200,7 +200,7 @@ export default function PartnerSettingsPage() {
                                         <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">Establishment Type</label>
                                         <select className="w-full h-12 rounded-2xl bg-gray-50 border-transparent focus:bg-white font-bold px-4 text-sm outline-none appearance-none cursor-pointer hover:bg-gray-100 transition-all">
                                             <option value="" disabled selected>Select Business Type</option>
-                                            <option>🏨 Hotels & Villas</option>
+                                            <option>🤝 Partner Business</option>
                                             <option>🏡 Homestays & Guest Houses</option>
                                             <option>🏝️ Resorts & Boutique Stays</option>
                                             <option>🛏️ Hostels & Backpacker Lodges</option>

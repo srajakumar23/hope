@@ -20,7 +20,7 @@ const MOCK_METRICS = {
 };
 
 const MOCK_PARTNERS = [
-    { id: "GHS1092", name: "Grand Hotel & Suites", joined: "Oct 12, 2026", status: "Active", slab: "7.5%" },
+    { id: "GHS1092", name: "Grand Hope Cafe", joined: "Oct 12, 2026", status: "Active", slab: "7.5%" },
     { id: "TRV402", name: "Traveler's Inn", joined: "Oct 15, 2026", status: "Active", slab: "10.0%" },
     { id: "SST819", name: "Sunset Tours", joined: "Oct 18, 2026", status: "Pending App", slab: "7.5%" },
 ];

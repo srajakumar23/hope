@@ -32,7 +32,7 @@ export default function PartnerLoginPage() {
 
             if (data.success) {
                 // Sync JWT session with localStorage guard used by the partner layout
-                localStorage.setItem("divyam_partner_session", JSON.stringify({ role: "PARTNER", partnerCode: data.partnerCode, ts: Date.now() }));
+                localStorage.setItem("hopecafe_partner_session", JSON.stringify({ role: "PARTNER", partnerCode: data.partnerCode, ts: Date.now() }));
                 toast.success("Login Successful");
                 router.push(data.redirectUrl || "/dashboard");
             } else {

@@ -80,7 +80,7 @@ export default function EarningsCalculator() {
                 </div>
             </div>
 
-            {/* Right Side: Orange Pattern Results */}
+            {/* Right Side: Results Section */}
             <div className="bg-transparent p-8 md:p-12 md:w-[45%] flex flex-col justify-center relative -ml-6 md:-ml-8 z-0">
                 <div className="space-y-10 pl-6 md:pl-10">
                     <div>

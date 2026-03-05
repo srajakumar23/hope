@@ -89,7 +89,7 @@ export default function RegisterPage() {
                         <div className="md:col-span-3 p-10 bg-white">
                             <CardHeader className="p-0 mb-8">
                                 <CardTitle className="text-3xl">Partner Registration</CardTitle>
-                                <p className="text-gray-500 text-sm mt-2">Become a Divyam Hospitality Partner today.</p>
+                                <p className="text-gray-500 text-sm mt-2">Become a HOPE Cafe Partner today.</p>
                             </CardHeader>
 
                             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -121,7 +121,7 @@ export default function RegisterPage() {
                                         >
                                             <option value="">Select Type</option>
                                             <option value="rental">Bike/Car Rental</option>
-                                            <option value="homestay">Homestay / Hotel</option>
+                                            <option value="homestay">Homestay / Villa</option>
                                             <option value="agency">Travel Agency</option>
                                             <option value="freelance">Freelance Guide</option>
                                         </select>

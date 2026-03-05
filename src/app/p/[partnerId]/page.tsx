@@ -30,7 +30,7 @@ export default function GuestRegistrationPage({ params }: { params: Promise<{ pa
         fetchPartner();
     }, [unwrappedParams.partnerId]);
 
-    const partnerName = partnerData?.name || (unwrappedParams.partnerId === "demo" ? "Grand Hotel & Suites" : `Partner #${unwrappedParams.partnerId}`);
+    const partnerName = partnerData?.name || (unwrappedParams.partnerId === "demo" ? "Grand Hope Cafe" : `Partner #${unwrappedParams.partnerId}`);
     const discountSlab = partnerData?.discount || 7.5;
 
     const handleGenerate = async (e: React.FormEvent) => {

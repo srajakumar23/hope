@@ -11,14 +11,14 @@ const DEMO_DATA = {
         {
             "id": "demo-id",
             "partnerCode": "demo",
-            "name": "Grand Hotel & Suites (Demo)",
+            "name": "Grand Hope Cafe (Demo)",
             "email": "demo@partner.hub",
             "mobile": "0000000000",
             "commissionSlab": 7.5
         },
         {
             "id": "p_1772277716048",
-            "name": "Hotel New",
+            "name": "Hope Cafe North",
             "contactName": "Test",
             "mobile": "9442266704",
             "email": null,

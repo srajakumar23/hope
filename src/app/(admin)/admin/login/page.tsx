@@ -54,7 +54,7 @@ export default function AdminLoginPage() {
                 className="w-full max-w-md"
             >
                 <Card className="bg-white border-none shadow-[0_32px_128px_-16px_rgba(0,0,0,0.1)] overflow-hidden rounded-[2.5rem]">
-                    {/* Brand Orange Plate - SOLID */}
+                    {/* Brand Purple Plate - SOLID */}
                     <div className="h-32 bg-hope-purple" />
 
                     <CardHeader className="text-center pt-0 -mt-16">

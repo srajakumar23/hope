@@ -172,7 +172,7 @@ export default function AdminDashboard() {
                             <ShieldCheck className="text-hope-purple w-10 h-10" />
                             Management Hub
                         </h1>
-                        <p className="text-gray-500 mt-1 font-medium">Enterprise oversight for the Divyam Referral Network.</p>
+                        <p className="text-gray-500 mt-1 font-medium">Enterprise oversight for the HOPE Cafe Referral Network.</p>
                     </div>
                     <div className="flex items-center gap-4">
                         <Button

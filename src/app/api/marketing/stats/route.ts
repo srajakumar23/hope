@@ -12,7 +12,7 @@ export async function GET() {
             where: { status: { in: ["SETTLED", "PAID"] } as any }
         });
 
-        // 1. Total Hotels Onboarded (For demo, all partners)
+        // 1. Total Partners Onboarded (For demo, all partners)
         const totalPartners = partners.length;
 
         // 2. Active this week (Joined in last 7 days)

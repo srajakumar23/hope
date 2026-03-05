@@ -43,7 +43,7 @@ export default function PartnerLayout({ children }: { children: React.ReactNode 
             return;
         }
 
-        const sessionRaw = localStorage.getItem("divyam_partner_session");
+        const sessionRaw = localStorage.getItem("hopecafe_partner_session");
         if (!sessionRaw) {
             toast.error("Session expired. Please sign in to continue.");
             router.replace("/login");
@@ -55,7 +55,7 @@ export default function PartnerLayout({ children }: { children: React.ReactNode 
     }, [pathname, router]);
 
     const handleLogout = () => {
-        localStorage.removeItem("divyam_partner_session");
+        localStorage.removeItem("hopecafe_partner_session");
         toast.info("Signed out successfully.");
         router.replace("/login");
     };
@@ -74,7 +74,7 @@ export default function PartnerLayout({ children }: { children: React.ReactNode 
                             <div className="w-10 h-10 bg-hope-purple rounded-xl flex items-center justify-center shadow-lg shadow-hope-purple/10">
                                 <span className="text-white text-2xl font-bold">✧</span>
                             </div>
-                            <span className="font-bold text-xl text-gray-900 tracking-tight">Divyam</span>
+                            <span className="font-bold text-xl text-gray-900 tracking-tight">HOPE Cafe</span>
                         </Link>
                     </div>
 

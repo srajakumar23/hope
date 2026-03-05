@@ -137,7 +137,7 @@ export default function ScanPage() {
 
                                 <p className="text-center text-xs text-gray-400 font-medium">
                                     Not registered yet?{" "}
-                                    <span className="text-gray-500 font-semibold">Contact your Hotel.</span>
+                                    <span className="text-gray-500 font-semibold">Contact support for assistance.</span>
                                 </p>
                             </motion.form>
                         ) : (
